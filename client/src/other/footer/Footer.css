@@ -1,0 +1,26 @@
+.footer {
+  width: 100vw;
+  height: auto;
+  background-color: var(--bg-secondary);
+}
+
+.footer .footer-link {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding-top: 2rem;
+}
+
+.footer .footer-logo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-logo p {
+  font-weight: bold;
+  font-size: 10rem;
+}

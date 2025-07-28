@@ -1,0 +1,73 @@
+.navbar {
+  width: 100vw;
+  height: 60px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+
+.navbar .nav-box-1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navbar .nav-box-1 .my-logo {
+  font-size: 2rem;
+  text-decoration: dotted;
+}
+
+.navbar .nav-box-2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.navbar .nav-box-2 .nav-search {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.navbar .nav-box-2 .nav-search .search {
+  width: 100%;
+  height: 40px;
+  background-color: var(--bg-tertiary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.navbar .nav-box-2 .nav-search .search .search-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--fg-primary);
+  font-family: "DM Sans", sans-serif;
+}
+
+.navbar .nav-box-2 .nav-tools {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navbar .nav-box-2 .nav-tools .nav-tool {
+  cursor: pointer;
+  color: var(--fg-secondary);
+}

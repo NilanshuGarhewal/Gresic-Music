@@ -1,0 +1,42 @@
+.track-info {
+  width: 100%;
+  height: auto;
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-info-wrapper {
+  width: 90%;
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.track-info-box-1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.track-img-box {
+  height: 20rem;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.track-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.track-title-box {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
