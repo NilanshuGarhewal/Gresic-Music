@@ -1,7 +1,7 @@
 import "./Tracks.css";
 import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
-import BeatCard from "../../global/beat_card/BeatCard";
+import BeatCard from "../../components/beat_card/BeatCard";
 
 const Tracks = () => {
   type Beat = {

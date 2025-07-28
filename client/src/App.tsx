@@ -1,11 +1,10 @@
-import "./App.css";
+import Navbar from "./layouts/Navbar/Navbar";
+import Footer from "./layouts/Footer/Footer";
 
-import Navbar from "./other/navbar/Navbar";
-import About from "./pages/about/About";
-import Home from "./pages/home/Home";
-import Tracks from "./pages/tracks/Tracks";
-import TrackInfo from "./pages/track_info/TrackInfo";
-import Footer from "./other/footer/Footer";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
+import Tracks from "./pages/Track/Tracks";
+import TrackInfo from "./pages/ShowTrack/TrackInfo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
