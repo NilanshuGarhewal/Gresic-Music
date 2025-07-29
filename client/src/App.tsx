@@ -7,11 +7,17 @@ import Tracks from "./pages/Track/Tracks";
 import TrackInfo from "./pages/ShowTrack/TrackInfo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [songTitleForLocation, setSongTitleForLocation] = useState("");
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar
+        songTitleForLocation={songTitleForLocation}
+        setSongTitleForLocation={setSongTitleForLocation}
+      />
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -20,7 +26,12 @@ function App() {
 
         <Route path="/tracks" element={<Tracks />}></Route>
 
-        <Route path="/track/:id" element={<TrackInfo />}></Route>
+        <Route
+          path="/track/:id"
+          element={
+            <TrackInfo setSongTitleForLocation={setSongTitleForLocation} />
+          }
+        ></Route>
       </Routes>
 
       <Footer />

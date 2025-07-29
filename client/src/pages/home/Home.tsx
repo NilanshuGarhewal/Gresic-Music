@@ -1,6 +1,6 @@
 import "./Home.css";
-import HeroSection from "../../components/hero_components/HeroSection";
-import PreviewSection from "../../components/preview_components/PreviewSection";
+import HeroSection from "./components/hero/HeroSection";
+import PreviewSection from "./components/preview/PreviewSection";
 
 export default function Home() {
   return (

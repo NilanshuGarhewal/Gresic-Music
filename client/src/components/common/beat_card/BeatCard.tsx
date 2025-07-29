@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./BeatCard.css";
 
-import img from "../../assets/images/example.jpg";
+import img from "../../../assets/images/example.jpg";
 
 type Beat = {
   _id: string;

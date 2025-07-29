@@ -1,5 +1,36 @@
 // MATH FUNCTIONS
 
+// CONVERT PX TO REM
 @function rem($px) {
   @return $px / 16 * 1rem;
+}
+
+// GET SPACING
+@function getSpacing($size) {
+  @return map-get($spacing-scale, $size);
+}
+
+// GIVES % PADDING
+@function aspect-ratio($width, $height) {
+  @return ($height / $width) * 100%;
+}
+
+// FOR MAINTAINING Z INDEX
+
+@function z($name) {
+  @return map-get($z-layers, $name);
+}
+
+// CONVERT INTO RGBA
+@function getRgba($color, $alpha) {
+  @return rgba($color, $alpha);
+}
+
+// GET TRANSITIONS
+@function getTransition3($base: all) {
+  @return ($base 0.3s cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+@function getTransition5($base: all) {
+  @return ($base 0.5s cubic-bezier(0.4, 0, 0.2, 1));
 }

@@ -1,5 +1,5 @@
 import "./HeroSection.css";
-import nature from "../../assets/images/nature_image.jpg";
+import nature from "../../../../assets/images/nature_image.jpg";
 
 export default function HeroSection() {
   return (
@@ -22,7 +22,7 @@ export default function HeroSection() {
       </div>
 
       <div className="hero-image">
-        <img src={nature} alt="nature" />
+        {/* <img src={nature} alt="nature" /> */}
       </div>
     </div>
   );

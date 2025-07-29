@@ -6,3 +6,49 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin flex-start-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin flex-end-center {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+@mixin flex-space-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-coloumn-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// TO GIVE FULL WIDTH BUT AUTO HEIGHT
+@mixin full-auto {
+  width: 100%;
+  height: auto;
+}
+
+@mixin auro-full {
+  width: auto;
+  height: 100%;
+}
+
+@mixin half-full {
+  width: 50%;
+  height: 100%;
+}
+
+@mixin full-half {
+  width: 100%;
+  height: 50%;
+}

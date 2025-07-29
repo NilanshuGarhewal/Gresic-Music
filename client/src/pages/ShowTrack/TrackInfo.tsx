@@ -21,21 +21,27 @@ type Beat = {
   releaseDate?: string;
 };
 
-const TrackInfo = () => {
+const TrackInfo = ({
+  setSongTitleForLocation,
+}: {
+  setSongTitleForLocation: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   const { id } = useParams();
   const [singleBeat, setSingleBeat] = useState<Beat>();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!id) return;
+
     fetch(`http://localhost:5000/track/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSingleBeat(data);
         setLoading(false);
+        setSongTitleForLocation(data.title); // ✅ moved here
       })
       .catch((err) => console.log(err));
-  }, [id]);
+  }, [id, setSongTitleForLocation]);
 
   if (loading) return <div>Loading...</div>;
 

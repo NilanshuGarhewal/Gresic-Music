@@ -1,0 +1,24 @@
+.nav-search {
+  width: 16rem;
+  height: 100%;
+  @include flex-center;
+  margin-right: 2rem;
+
+  .search {
+    width: 100%;
+    height: 40px;
+    background-color: var(--bg-tertiary);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+
+    .search-input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $fg-primary;
+      font-family: $font-main;
+    }
+  }
+}

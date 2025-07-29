@@ -1,44 +1,33 @@
-import "./Navbar.css";
-import { Link } from "react-router-dom";
+import Location from "./components/Location";
+import NavLogo from "./components/NavLogo";
+import NavSearch from "./components/NavSearch";
+import NavTools from "./components/NavTools";
 
-const Navbar = () => {
+interface NavbarProps {
+  songTitleForLocation: string;
+  setSongTitleForLocation: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Navbar = ({
+  songTitleForLocation,
+  setSongTitleForLocation,
+}: NavbarProps) => {
   return (
     <div className="navbar">
-      <div className="nav-box-1">
-        <span className="my-logo">
-          <i>gresic</i>
-        </span>
-      </div>
+      <div className="nav-wrapper">
+        <NavLogo />
 
-      <div className="nav-box-2">
-        <div className="nav-search">
-          <div className="search">
-            <input
-              className="search-input"
-              type="text"
-              placeholder="Search here..."
-            />
-          </div>
-        </div>
+        <div className="nav-container">
+          <NavSearch />
 
-        <div className="nav-tools">
-          <div className="nav-tool">
-            <Link to={"/"} className="uni-link">
-              Home
-            </Link>
-          </div>
-          <div className="nav-tool">
-            <Link to={"/about"} className="uni-link">
-              About
-            </Link>
-          </div>
-          <div className="nav-tool">
-            <Link to={"/tracks"} className="uni-link">
-              Tracks
-            </Link>
-          </div>
+          <NavTools />
         </div>
       </div>
+
+      <Location
+        songTitleForLocation={songTitleForLocation}
+        setSongTitleForLocation={setSongTitleForLocation}
+      />
     </div>
   );
 };

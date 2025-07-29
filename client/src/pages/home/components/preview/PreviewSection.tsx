@@ -1,7 +1,7 @@
 import "./PreviewSection.css";
 
 import { useEffect, useState } from "react";
-import BeatCard from "../beat_card/BeatCard";
+import BeatCard from "../../../../components/common/beat_card/BeatCard";
 
 const PreviewSection = () => {
   type Beat = {

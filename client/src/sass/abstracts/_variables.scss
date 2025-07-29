@@ -1,14 +1,40 @@
 // ALL THE VARIABLES
 
 // COLORS
-$primary: #339ed0;
+$primary: #5f55df;
 
-$fg-primary: #fff;
+$fg-primary: #ffffff;
 $fg-secondary: #808080;
 
-$bg-primary: #060606;
-$bg-secondary: #121212;
-$bg-tertiary: #202020;
+$bg-primary: #000000;
+$bg-secondary: #181818;
+$bg-tertiary: #262626;
+
+$bg-border: #26262675;
 
 // FONTS
 $font-main: "DM Sans", sans-serif;
+
+// SPACING
+$spacing-scale: (
+  xs: 0.25rem,
+  sm: 0.5rem,
+  md: 1rem,
+  lg: 2rem,
+  xl: 4rem,
+  xxl: 6rem,
+);
+
+// Z-INDEX
+$z-layers: (
+  background: 0,
+  base: 1,
+  dropdown: 10,
+  overlay: 20,
+  modal: 30,
+  nav: 10000,
+);
+
+// TRANSITIONS
+$transition-3-ease-in: 0.3s ease-in;
+$transition-5-ease-in: 0.5s ease-in;

@@ -1,0 +1,17 @@
+.nav-tools {
+  @include auro-full;
+  @include flex-center;
+  gap: getSpacing(lg);
+
+  .nav-tool {
+    .nav-link {
+      cursor: pointer;
+      color: $fg-secondary;
+    }
+
+    :hover {
+      color: $fg-primary;
+      transition: getTransition3(color);
+    }
+  }
+}

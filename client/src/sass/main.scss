@@ -11,7 +11,13 @@
 // COMPONENTS
 
 // LAYOUT
-@import "./layout/Navbar.scss";
+
+// NAVBAR
+@import "./layout/Navbar/Navbar.scss";
+@import "./layout/Navbar/NavLogo.scss";
+@import "./layout/Navbar/NavSearch.scss";
+@import "./layout/Navbar/NavTools.scss";
+@import "./layout/Navbar/Location.scss";
 
 // PAGES
 
