@@ -1,5 +1,5 @@
 .nav-tools {
-  @include auro-full;
+  @include auto-full;
   @include flex-center;
   gap: getSpacing(lg);
 

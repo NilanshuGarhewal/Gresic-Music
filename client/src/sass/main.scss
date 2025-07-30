@@ -19,7 +19,20 @@
 @import "./layout/Navbar/NavTools.scss";
 @import "./layout/Navbar/Location.scss";
 
+// FOOTER
+
+@import "./layout/Footer/Footer.scss";
+@import "./layout/Footer/FooterDetails.scss";
+@import "./layout/Footer/FooterLogo.scss";
+@import "./layout/Footer/FooterLinks.scss";
+@import "./components/FooterCard/FooterCard.scss";
+
 // PAGES
+
+// HOME
+@import "./pages/Home/Home.scss";
+@import "./pages/Home/HeroSection.scss";
+@import "./pages/Home/SearchSection.scss";
 
 // THEMES
 @import "./themes/default";

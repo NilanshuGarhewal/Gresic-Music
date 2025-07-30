@@ -1,0 +1,25 @@
+.footer-box-2 {
+  @include half-full;
+  @include flex-end-center;
+  gap: getSpacing(xl);
+  align-items: start;
+
+  .f-box-1 {
+    @include flex-coloumn-center-start;
+    gap: getSpacing(md);
+
+    .f-box-data {
+      @include flex-coloumn-center-start;
+      gap: getSpacing(sm);
+
+      .f-data-text {
+        cursor: pointer;
+      }
+
+      .f-data-text:hover {
+        color: $fg-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}

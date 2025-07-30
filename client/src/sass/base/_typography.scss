@@ -1,8 +1,57 @@
 // ALL FONT STYLES & TEXT FORMATTING
 
+// @font-face {
+//   font-family: "AG regular";
+//   src: url("../../assets/fonts/armin-grotesk/ArminGrotesk-Regular.woff2")
+//     format("woff2")
+//     url("../../assets/fonts/armin-grotesk/ArminGrotesk-Regular.woff")
+//     format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "AG semi-bold";
+//   src: url("../../assets/fonts/armin-grotesk/ArminGrotesk-SemiBold.woff2")
+//     format("woff2")
+//     url("../../assets/fonts/armin-grotesk/ArminGrotesk-SemiBold.woff")
+//     format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "AG black";
+//   src: url("../../assets/fonts/armin-grotesk/ArminGrotesk-Black.woff2")
+//     format("woff2")
+//     url("../../assets/fonts/armin-grotesk/ArminGrotesk-Black.woff")
+//     format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
 body {
   font-family: $font-main;
   background-color: $bg-primary;
   color: $fg-primary;
   font-weight: 500;
+}
+
+.sm-text {
+  font-size: rem(12);
+  color: $fg-secondary;
+}
+
+.real-link {
+  color: $fg-secondary;
+  text-decoration: none;
+}
+
+.real-link-u {
+  color: $fg-secondary;
+  text-decoration: underline;
+}
+
+.logo {
+  font-style: italic;
 }

@@ -1,0 +1,12 @@
+.footer-box-1 {
+  @include half-full;
+
+  .f-logo {
+    font-size: 6rem;
+    @include flex-start-center;
+
+    .f-logo-text {
+      opacity: 0.2;
+    }
+  }
+}

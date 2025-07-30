@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  height: auto;
+  @include flex-coloumn-center;
+  padding: 0 getSpacing(xxl);
+
+  .footer-links-wrapper {
+    width: 100%;
+    height: auto;
+    @include flex-space-between-center;
+    border-top: 2px solid $bg-border;
+    padding: getSpacing(xl) 0;
+  }
+}

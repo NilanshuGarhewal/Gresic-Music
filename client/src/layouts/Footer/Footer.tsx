@@ -1,17 +1,22 @@
-import "./Footer.css";
+// import "./Footer.css";
+
+import FooterDetails from "./components/FooterDetails";
+import FooterLinks from "./components/FooterLinks";
+import FooterLogo from "./components/FooterLogo";
+import FooterCard from "../../components/FooterCard/FooterCard";
 
 export default function Footer() {
   return (
     <div className="footer">
-      <div className="footer-link">
-        <p>Instagram</p>
-        <p>Linkedin</p>
-        <p>YouTube</p>
+      <FooterCard />
+
+      <div className="footer-links-wrapper">
+        <FooterLogo />
+
+        <FooterLinks />
       </div>
 
-      <div className="footer-logo">
-        <p>gresic</p>
-      </div>
+      <FooterDetails />
     </div>
   );
 }
