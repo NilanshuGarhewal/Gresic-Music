@@ -1,7 +1,6 @@
-import "./Tracks.css";
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-import BeatCard from "../../components/common/beat_card/BeatCard";
+import Filters from "./components/FIlters";
+import TrackContainer from "./components/TrackContainer";
 
 const Tracks = () => {
   type Beat = {
@@ -11,6 +10,7 @@ const Tracks = () => {
     audioUrl?: string;
     genre?: string[];
     mood?: string[];
+    scale: string,
     duration?: string;
     price?: string;
     description?: string;
@@ -30,15 +30,13 @@ const Tracks = () => {
 
   return (
     <div className="tracks">
-      <h1>All Tracks</h1>
+      <Filters />
 
-      <div className="track-wrapper">
-        {allBeats.map((beat, index) => (
-          <BeatCard key={beat._id ?? index} beat={beat} index={index} />
-        ))}
-      </div>
+      <TrackContainer allBeats={allBeats}/>
     </div>
   );
 };
 
 export default Tracks;
+
+

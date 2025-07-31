@@ -19,3 +19,22 @@
   background-color: $secondary;
   border-radius: 999px;
 }
+
+.button-sm {
+  padding: 0.5rem 1rem;
+  background-color: $primary;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.border-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid $fg-primary;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.border-btn:hover {
+  cursor: pointer;
+  background-color: #121212;
+}

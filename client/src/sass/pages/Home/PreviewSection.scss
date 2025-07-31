@@ -1,0 +1,20 @@
+.preview-section {
+  width: 100%;
+  height: auto;
+  padding: 0 getSpacing(xxl);
+
+  .preview-heading {
+    font-size: 3rem;
+    margin-bottom: getSpacing(lg);
+    @include flex-start-center;
+    gap: getSpacing(md);
+  }
+
+  .preview-wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: getSpacing(lg);
+  }
+}

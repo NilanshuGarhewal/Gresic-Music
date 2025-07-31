@@ -1,0 +1,55 @@
+.track-wrapper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: getSpacing(md);
+
+  .track-img {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.3rem;
+    }
+  }
+
+  .track-player {
+    flex: 1;
+    @include flex-start-center;
+    gap: getSpacing(sm);
+
+    .play-pause {
+      width: 40px;
+      height: 40px;
+      background: $primary;
+      border-radius: 50%;
+      @include flex-center;
+    }
+  }
+
+  .track-visualizer {
+    flex: 1;
+    @include flex-space-between-center;
+
+    .beep {
+      width: 85%;
+      height: 2px;
+      background: $bg-tertiary;
+    }
+
+    .track-duration-box {
+      font-size: .8rem;
+      color: $fg-secondary;
+    }
+  }
+
+  .track-title {
+    width: 25%;
+    padding-right: getSpacing(md);
+  }
+}

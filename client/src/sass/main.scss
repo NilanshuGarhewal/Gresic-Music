@@ -9,6 +9,8 @@
 @import "./base/typography";
 
 // COMPONENTS
+@import "./components/BeatCard/BeatCard.scss";
+@import "./components/FooterCard/FooterCard.scss";
 
 // LAYOUT
 
@@ -25,7 +27,6 @@
 @import "./layout/Footer/FooterDetails.scss";
 @import "./layout/Footer/FooterLogo.scss";
 @import "./layout/Footer/FooterLinks.scss";
-@import "./components/FooterCard/FooterCard.scss";
 
 // PAGES
 
@@ -33,6 +34,15 @@
 @import "./pages/Home/Home.scss";
 @import "./pages/Home/HeroSection.scss";
 @import "./pages/Home/SearchSection.scss";
+@import "./pages/Home/PreviewSection.scss";
+
+// Track
+@import "./pages/Track/Track.scss";
+@import "./pages/Track/Filters.scss";
+@import "./pages/Track/TrackContainer.scss";
+@import "./pages/Track/TrackCard.scss";
+@import "./pages/Track/TrackTools.scss";
+@import "./pages/Track/TrackWrapper.scss";
 
 // THEMES
 @import "./themes/default";

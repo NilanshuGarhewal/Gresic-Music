@@ -46,7 +46,7 @@
 
       .search-container {
         @include flex-center;
-        gap: getSpacing(lg);
+        gap: getSpacing(md);
 
         .search-box {
           padding: 1rem 2rem;
@@ -54,6 +54,7 @@
           border-radius: 999px;
 
           input {
+            width: rem(280);
             outline: none;
             border: none;
             background-color: transparent;

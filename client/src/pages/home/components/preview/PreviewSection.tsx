@@ -1,7 +1,8 @@
-import "./PreviewSection.css";
+// import "./PreviewSection.css";
 
 import { useEffect, useState } from "react";
-import BeatCard from "../../../../components/common/beat_card/BeatCard";
+import { Link } from "react-router-dom";
+import BeatCard from "../../../../components/common/BeatCard/BeatCard";
 
 const PreviewSection = () => {
   type Beat = {
@@ -30,10 +31,15 @@ const PreviewSection = () => {
 
   return (
     <div className="preview-section">
-      <h1>Newly Released</h1>
+      <div className="preview-heading">
+        <p>Newly Released</p>
+        <Link to={"/tracks"} className="border-btn uni-link">
+          View All
+        </Link>
+      </div>
 
       <div className="preview-wrapper">
-        {allBeats.slice(0, 5).map((beat, index) => (
+        {allBeats.slice(0, 8).map((beat, index) => (
           <BeatCard key={beat._id} beat={beat} index={index} />
         ))}
       </div>
