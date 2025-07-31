@@ -18,33 +18,37 @@
     }
   }
 
-  .track-player {
+  .track-visualizer {
     flex: 1;
     @include flex-start-center;
     gap: getSpacing(sm);
 
-    .play-pause {
-      width: 40px;
-      height: 40px;
-      background: $primary;
-      border-radius: 50%;
-      @include flex-center;
-    }
-  }
+    .track-player {
+      flex: 1;
+      @include flex-start-center;
+      gap: getSpacing(sm);
 
-  .track-visualizer {
-    flex: 1;
-    @include flex-space-between-center;
+      .play-pause {
+        width: 40px;
+        height: 40px;
+        background: $primary;
+        border-radius: 50%;
+        @include flex-center;
+      }
 
-    .beep {
-      width: 85%;
-      height: 2px;
-      background: $bg-tertiary;
-    }
+      .track-visualizer-box {
+        flex: 1;
+        @include flex-space-between-center;
 
-    .track-duration-box {
-      font-size: .8rem;
-      color: $fg-secondary;
+        .track-waveform {
+          width: 90%;
+        }
+
+        .track-duration-box {
+          font-size: 0.8rem;
+          color: $fg-secondary;
+        }
+      }
     }
   }
 

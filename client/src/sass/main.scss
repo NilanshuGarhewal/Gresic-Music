@@ -11,6 +11,7 @@
 // COMPONENTS
 @import "./components/BeatCard/BeatCard.scss";
 @import "./components/FooterCard/FooterCard.scss";
+@import "./components/Wavesurfer/Wavesurfer.scss";
 
 // LAYOUT
 
@@ -27,6 +28,10 @@
 @import "./layout/Footer/FooterDetails.scss";
 @import "./layout/Footer/FooterLogo.scss";
 @import "./layout/Footer/FooterLinks.scss";
+
+// MUSIC PLAYER
+
+@import "./layout/Player/Player.scss";
 
 // PAGES
 

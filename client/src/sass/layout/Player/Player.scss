@@ -1,0 +1,77 @@
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, $bg-primary);
+  display: flex;
+  padding: 0 getSpacing(xxl);
+  align-items: center;
+  gap: getSpacing(md);
+  border-radius: 0.8rem;
+
+  .player-info-wrapper {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: getSpacing(sm);
+
+    .player-image {
+      width: 60px;
+      height: 60px;
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+
+    .track-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      .bpm {
+        font-size: 0.8rem;
+        color: $fg-secondary;
+      }
+    }
+  }
+
+  .player-left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: getSpacing(md);
+
+    .play-btn {
+      width: 50px;
+      height: 50px;
+      @include flex-center;
+      background-color: $primary;
+      border-radius: 50%;
+    }
+
+    .waveform-wrapper {
+      flex: 1;
+    }
+
+    .time-info {
+      font-size: 0.8rem;
+      color: $fg-secondary;
+    }
+  }
+
+  .track-details {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: getSpacing(md);
+  }
+}

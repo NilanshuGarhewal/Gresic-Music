@@ -2,11 +2,13 @@ import img from "../../../assets/images/test.jpg";
 
 import { PlayIcon } from "@phosphor-icons/react";
 
+import WaveformPlayer from "../../../store/WaveFormPlayer";
+
 type Beat = {
   _id: string;
   title?: string;
   bpm?: number;
-  audioUrl?: string;
+  audioUrl: string;
   genre?: string[];
   mood?: string[];
   scale: string;
@@ -27,16 +29,9 @@ const TrackWrapper = ({ beat }: TrackWrapperProps) => {
         <img src={img} alt="" />
       </div>
 
-      <div className="track-player">
-        <div className="play-pause">
-          <PlayIcon weight="fill" size={16} />
-        </div>
-
-        <div className="track-visualizer">
-          <div className="beep track-music-visualizer"></div>
-          <div className="track-duration-box">{beat.duration}</div>
-        </div>
-      </div>
+      {/* <div className="track-visualizer">
+        <WaveformPlayer audioUrl={beat.audioUrl} />
+      </div> */}
 
       <div className="track-title">{beat.title}</div>
     </div>

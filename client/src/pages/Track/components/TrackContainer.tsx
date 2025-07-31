@@ -4,7 +4,7 @@ type Beat = {
   _id: string;
   title?: string;
   bpm?: number;
-  audioUrl?: string;
+  audioUrl: string;
   genre?: string[];
   mood?: string[];
   scale: string;
