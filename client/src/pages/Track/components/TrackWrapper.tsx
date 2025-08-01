@@ -25,11 +25,13 @@ const TrackWrapper = ({ beat }: TrackWrapperProps) => {
         <img src={img} alt="" />
       </div>
 
-      {/* <div className="track-visualizer">
-        <WaveformPlayer audioUrl={beat.audioUrl} />
-      </div> */}
-
-      <div className="track-title">{beat.title}</div>
+      <div className="track-det">
+        <div className="track-title">
+          <p>{beat.title}</p>
+          <p className="track-duration">Gresic</p>
+        </div>
+        <div className="track-duration">{beat.duration}</div>
+      </div>
     </div>
   );
 };

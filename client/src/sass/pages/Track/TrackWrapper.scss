@@ -1,9 +1,8 @@
 .track-wrapper {
-  width: 60%;
+  width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
-  gap: getSpacing(md);
 
   .track-img {
     width: 70px;
@@ -18,42 +17,16 @@
     }
   }
 
-  .track-visualizer {
+  .track-det {
     flex: 1;
-    @include flex-start-center;
-    gap: getSpacing(sm);
-
-    .track-player {
-      flex: 1;
-      @include flex-start-center;
-      gap: getSpacing(sm);
-
-      .play-pause {
-        width: 40px;
-        height: 40px;
-        background: $primary;
-        border-radius: 50%;
-        @include flex-center;
-      }
-
-      .track-visualizer-box {
-        flex: 1;
-        @include flex-space-between-center;
-
-        .track-waveform {
-          width: 90%;
-        }
-
-        .track-duration-box {
-          font-size: 0.8rem;
-          color: $fg-secondary;
-        }
-      }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 getSpacing(md);
+    
+    .track-duration {
+      font-size: .8rem;
+      color: $fg-secondary;
     }
-  }
-
-  .track-title {
-    width: 25%;
-    padding-right: getSpacing(md);
   }
 }

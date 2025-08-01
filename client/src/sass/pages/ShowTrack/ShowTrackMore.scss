@@ -1,0 +1,30 @@
+.show-track-more {
+  width: auto;
+  height: 320px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: getSpacing(xl) getSpacing(lg);
+
+  .st-box {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: getSpacing(sm);
+
+    .stb-head {
+      font-size: 0.8rem;
+      color: $fg-secondary;
+    }
+
+    .stb-data {
+      display: flex;
+      align-items: center;
+      gap: getSpacing(sm);
+    }
+  }
+
+  .st-box-2 {
+    width: auto;
+  }
+}

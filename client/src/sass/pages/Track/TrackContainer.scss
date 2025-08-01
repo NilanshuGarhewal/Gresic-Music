@@ -4,7 +4,22 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  gap: getSpacing(sm);
-  border-radius: 0.5rem;
   padding-bottom: 100px;
+  gap: getSpacing(md);
+  border: 2px solid $bg-border;
+  border-radius: 1rem;
+  padding: getSpacing(md);
+  padding-bottom: 100px;
+
+  .tc-head {
+    font-size: 3rem;
+  }
+
+  .tc-wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: getSpacing(sm);
+
+  }
 }

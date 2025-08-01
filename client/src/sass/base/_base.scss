@@ -27,6 +27,12 @@
   font-size: 0.8rem;
 }
 
+.button-dark {
+  padding: 0.5rem 1rem;
+  background-color: $bg-secondary;
+  border-radius: 999px;
+}
+
 .border-btn {
   padding: 0.5rem 1rem;
   border: 2px solid $fg-primary;

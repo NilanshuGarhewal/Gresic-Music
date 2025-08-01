@@ -8,10 +8,14 @@
   gap: getSpacing(md);
 
   .genre-wrapper {
-    width: 45%;
+    width: 50%;
     height: auto;
     display: flex;
     gap: getSpacing(sm);
+  }
+
+  .det-col {
+    width: 10%;
   }
 
   .purchase-wrapper {

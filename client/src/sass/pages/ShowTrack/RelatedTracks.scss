@@ -1,0 +1,27 @@
+.related-tracks {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: getSpacing(lg);
+
+  .rt-heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: getSpacing(lg);
+
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  .rt-wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: getSpacing(lg);
+  }
+}

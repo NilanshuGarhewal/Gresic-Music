@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 
-import img from "../../../assets/images/test.jpg";
+import { useDispatch } from "react-redux";
+import { playTrack } from "../../../store/playerSlice";
 
 type Beat = {
   _id: string;
   title?: string;
   bpm?: number;
-  audioUrl?: string;
+  audioUrl: string;
   genre?: string[];
   mood?: string[];
   duration?: string;
@@ -21,11 +22,17 @@ type BeatCardProps = {
 };
 
 const BeatCard = ({ beat, index }: BeatCardProps) => {
+  const dispatch = useDispatch();
+
+  const handlePlay = () => {
+    dispatch(playTrack(beat));
+  };
+
   return (
     <Link to={`/track/${beat?._id}`} key={index} className="beat uni-link">
       <div className="beat-container">
         <div className="beat-box-1">
-          <img src={img} alt="" />
+          <img src={beat.coverImage} alt="" />
         </div>
 
         <div className="beat-box-2">
@@ -44,7 +51,9 @@ const BeatCard = ({ beat, index }: BeatCardProps) => {
               ))}
             </div>
 
-            <div className="card-play button-sm">Play</div>
+            <div className="card-play button-sm" onClick={handlePlay}>
+              Play
+            </div>
           </div>
         </div>
       </div>

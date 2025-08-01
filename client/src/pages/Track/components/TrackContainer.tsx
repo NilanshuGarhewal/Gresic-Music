@@ -22,9 +22,13 @@ type TrackContainerProps = {
 const TrackContainer = ({ allBeats }: TrackContainerProps) => {
   return (
     <div className="track-container">
-      {allBeats.map((beat, index) => (
-        <TrackCard key={index + 1} beat={beat} />
-      ))}
+      <div className="tc-head">My Typebeats</div>
+
+      <div className="tc-wrapper">
+        {allBeats.map((beat, index) => (
+          <TrackCard key={index + 1} beat={beat} />
+        ))}
+      </div>
     </div>
   );
 };

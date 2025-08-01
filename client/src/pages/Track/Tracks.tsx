@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Filters from "./components/FIlters";
+// import Filters from "./components/FIlters";
 import TrackContainer from "./components/TrackContainer";
 
 const Tracks = () => {
@@ -30,7 +30,7 @@ const Tracks = () => {
 
   return (
     <div className="tracks">
-      <Filters />
+      {/* <Filters /> */}
 
       <TrackContainer allBeats={allBeats}/>
     </div>
