@@ -1,9 +1,5 @@
 import img from "../../../assets/images/test.jpg";
 
-import { PlayIcon } from "@phosphor-icons/react";
-
-import WaveformPlayer from "../../../store/WaveFormPlayer";
-
 type Beat = {
   _id: string;
   title?: string;

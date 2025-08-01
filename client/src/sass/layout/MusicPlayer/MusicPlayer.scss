@@ -1,0 +1,115 @@
+.music-player {
+  width: 100vw;
+  height: 82px;
+  position: fixed;
+  background-color: $bg-secondary;
+  bottom: 0;
+  @include flex-coloumn-center;
+
+  .music-player-bar {
+    width: 100%;
+    height: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .mp-line {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background-color: $bg-tertiary;
+
+      .mp-tooltip {
+        position: absolute;
+        top: -28px;
+        transform: translateX(-50%);
+        font-size: 0.8rem;
+      }
+    }
+
+    .mp-progress {
+      background-color: $primary;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .mp-dot {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: $primary;
+      position: absolute;
+      border-radius: 50%;
+      cursor: grab;
+      transform: translate(-50%, -50%);
+      top: 50%;
+    }
+  }
+
+  .music-player-more {
+    width: 100%;
+    height: 100%;
+    @include flex-space-between-center;
+    padding: 0 getSpacing(xxl);
+
+    .music-player-detail {
+      width: 25%;
+      height: 100%;
+      @include flex-start-center;
+      gap: getSpacing(md);
+
+      .mp-img {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 3px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .mp-text {
+        @include auto-full;
+        @include flex-coloumn-center-start;
+        gap: getSpacing(xs);
+
+        .mp-artist {
+          font-size: 0.8rem;
+          color: $fg-secondary;
+        }
+      }
+    }
+
+    .music-player-controls {
+      width: 50%;
+      height: 100%;
+      @include flex-coloumn-center;
+      gap: getSpacing(sm);
+
+      .mp-play-pause {
+        height: 40px;
+        width: 40px;
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+
+      .mp-duration {
+        font-size: 0.8rem;
+        color: $fg-secondary;
+      }
+    }
+
+    .music-player-tools {
+      width: 25%;
+      height: 100%;
+      @include flex-end-center;
+    }
+  }
+}

@@ -71,7 +71,7 @@ const MusicPlayer = () => {
     } else {
       audio.pause();
     }
-  }, [isPlaying, currentTrack]); // <-- notice currentTrack is now added
+  }, [isPlaying, currentTrack]);
 
   // Seek on click
   const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {

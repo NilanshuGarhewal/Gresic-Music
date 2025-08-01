@@ -8,7 +8,8 @@ import TrackInfo from "./pages/ShowTrack/TrackInfo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Player from "./layouts/MusicPlayer/Player";
+// import Player from "./layouts/MusicPlayer/Player";
+import MusicPlayer from "./layouts/MusicPlayer/MusicPlayer";
 
 function App() {
   const [songTitleForLocation, setSongTitleForLocation] = useState("");
@@ -37,7 +38,8 @@ function App() {
 
       <Footer />
 
-      <Player />
+      {/* <Player /> */}
+      <MusicPlayer />
     </BrowserRouter>
   );
 }
