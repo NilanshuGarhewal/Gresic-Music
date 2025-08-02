@@ -29,7 +29,7 @@ app.use(express.json());
 
 // MONGO DB
 
-const URL = process.env.MONGO_URI!;
+const URL = "mongodb://127.0.0.1:27017/gresicmusic";
 
 mongoose
   .connect(URL)
