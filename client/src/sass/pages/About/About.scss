@@ -28,3 +28,16 @@
         }
     }
 }
+
+@media (max-width: 655px) {
+    .about {
+        .about-head {
+            font-size: 3rem;
+        }
+
+        .a-links {
+            flex-direction: column;
+            gap: getSpacing(sm);
+        }
+    }
+}
