@@ -21,7 +21,7 @@ const PreviewSection = () => {
   const [allBeats, setAllBeats] = useState<Beat[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("https://gresic-server.onrender.com/")
       .then((res) => res.json())
       .then((data) => {
         setAllBeats(data);

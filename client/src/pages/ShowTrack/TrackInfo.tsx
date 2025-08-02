@@ -61,7 +61,7 @@ const TrackInfo = ({
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:5000/track/${id}`)
+    fetch(`https://gresic-server.onrender.com/track/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSingleBeat(data);
