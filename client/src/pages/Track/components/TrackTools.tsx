@@ -34,9 +34,9 @@ const TrackTools = ({ beat }: TrackToolsProps) => {
         ))}
       </div>
 
-      <div className="det-col">{beat.bpm} BPM</div>
+      <div className="det-col det-bpm">{beat.bpm} BPM</div>
 
-      <div className="det-col">{beat.scale}</div>
+      <div className="det-col det-key">{beat.scale}</div>
 
       <div className="purchase-wrapper">
         <div className="button-sm">VIEW</div>

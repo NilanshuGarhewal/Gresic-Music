@@ -14,10 +14,16 @@ const Navbar = ({
 }: NavbarProps) => {
   return (
     <div className="navbar">
+
+
+
       <div className="nav-wrapper">
         <NavLogo />
 
         <div className="nav-container">
+
+          
+
           <NavSearch />
 
           <NavTools />

@@ -9,7 +9,7 @@ const NavTools = () => {
         </Link>
       </div>
       <div className="nav-tool">
-        <Link to={"/about"} className="nav-link uni-link">
+        <Link to={"/about"} className="nav-link uni-link none">
           About
         </Link>
       </div>

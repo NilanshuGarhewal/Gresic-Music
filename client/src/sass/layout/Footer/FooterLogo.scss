@@ -10,3 +10,22 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .footer-box-1 {
+    .f-logo {
+      flex-direction: column;
+      line-height: 0.8;
+      align-items: start;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-box-1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+}

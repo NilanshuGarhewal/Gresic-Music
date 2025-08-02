@@ -6,3 +6,17 @@
   padding: getSpacing(md) getSpacing(xxl);
   gap: getSpacing(md);
 }
+
+@media (max-width: 1024px) {
+  .tracks {
+    padding: 0 getSpacing(lg);
+    gap: 0;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracks {
+    padding: 0 getSpacing(md);
+  }
+}

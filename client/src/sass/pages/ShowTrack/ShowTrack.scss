@@ -111,8 +111,78 @@
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 0; transform: translateX(100%); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateX(100%); }
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+// RESPONSIVENESS
+
+@media (max-width: 1200px) {
+  .track-info {
+    margin-top: 6rem;
+    .track-info-wrapper {
+      flex-direction: column;
+      gap: getSpacing(lg);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-info {
+    padding: 0 getSpacing(lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .track-info {
+    padding: 0 getSpacing(md);
+    
+    .track-info-wrapper {
+      gap: getSpacing(xl);
+      
+      .show-track-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: getSpacing(md);
+
+        .show-track-img {
+          width: 200px;
+          height: 200px;
+
+
+        }
+
+        .show-track-details {
+          height: auto;
+          
+          .st-info {
+            align-items: center;
+
+            .st-title {
+              font-size: 2rem;
+            }
+
+            .st-artist {
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

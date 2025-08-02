@@ -1,5 +1,3 @@
-import img from "../../../assets/images/test.jpg";
-
 type Beat = {
   _id: string;
   title?: string;
@@ -22,7 +20,7 @@ const TrackWrapper = ({ beat }: TrackWrapperProps) => {
   return (
     <div className="track-wrapper">
       <div className="track-img">
-        <img src={img} alt="" />
+        <img src={beat.coverImage} alt={beat.title} />
       </div>
 
       <div className="track-det">

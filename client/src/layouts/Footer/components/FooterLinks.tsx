@@ -50,7 +50,7 @@ const FooterLinks = () => {
         </div>
       </div>
 
-      <div className="f-box-1">
+      <div className="f-box-1 none">
         <div className="f-box-header">Nilanshu's Social</div>
         <div className="f-box-data">
           <a

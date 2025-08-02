@@ -33,7 +33,7 @@ const PreviewSection = () => {
     <div className="related-tracks">
       <div className="rt-heading">
         <p>Related Tracks</p>
-        <Link to={"/tracks"} className="border-btn uni-link">
+        <Link to={"/tracks"} className="border-btn uni-link none">
           View All
         </Link>
       </div>

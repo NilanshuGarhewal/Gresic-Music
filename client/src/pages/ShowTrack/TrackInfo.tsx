@@ -13,7 +13,7 @@ import RelatedTracks from "./components/RelatedTracks";
 
 import { useDispatch, useSelector } from "react-redux";
 import { playTrack, pauseTrack, resumeTrack } from "../../store/playerSlice";
-import { RootState } from "../../store"; // <- Add this import if not present
+import { RootState } from "../../store";
 
 type Beat = {
   _id: string;
@@ -90,6 +90,7 @@ const TrackInfo = ({
 
   return (
     <div className="track-info">
+      
       <div className="track-info-wrapper">
         <div className="show-track-wrapper">
           <div className="show-track-img">
@@ -118,10 +119,10 @@ const TrackInfo = ({
               </div>
             </div>
 
-            <div className="buy-track">
+            {/* <div className="buy-track">
               <div className="st-price">{singleBeat.price || "N/A"}</div>
               <div className="button-sm">Purchase</div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -129,6 +130,8 @@ const TrackInfo = ({
 
         <ShowTrackMore singleBeat={singleBeat} />
       </div>
+
+      <div className="divider"></div>
 
       <RelatedTracks />
     </div>

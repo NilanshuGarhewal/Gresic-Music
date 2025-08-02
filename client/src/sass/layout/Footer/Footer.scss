@@ -12,3 +12,21 @@
     padding: getSpacing(xl) 0;
   }
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0 getSpacing(lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 getSpacing(md);
+    
+    .footer-links-wrapper {
+      flex-direction: column;
+      gap: getSpacing(lg);
+      padding: getSpacing(md);
+    }
+  }
+}

@@ -143,7 +143,10 @@ const MusicPlayer = () => {
       </div>
 
       <div className="music-player-more">
-        <div className="music-player-detail">
+        <Link
+          to={`/track/${currentTrack._id}`}
+          className="music-player-detail uni-link"
+        >
           <div className="mp-img">
             <img src={tempImg} alt={currentTrack.title} />
           </div>
@@ -151,7 +154,7 @@ const MusicPlayer = () => {
             <p className="mp-title">{currentTrack.title}</p>
             <p className="mp-artist">Gresic</p>
           </div>
-        </div>
+        </Link>
 
         <div className="music-player-controls">
           <div className="mp-play-pause" onClick={togglePlay}>

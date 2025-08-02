@@ -23,3 +23,16 @@
 
   }
 }
+
+@media (max-width: 1024px) {
+  .track-container {
+    border: none;
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+
+    .tc-head {
+      font-size: 2rem;
+    }
+  }
+}

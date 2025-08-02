@@ -28,3 +28,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer-card {
+     .f-card-container {
+      padding: getSpacing(md);
+
+      .f-card-text {
+        font-size: 2rem;
+        text-align: center;
+      }
+     }
+  }
+}

@@ -25,3 +25,33 @@
     gap: getSpacing(lg);
   }
 }
+
+@media (max-width: 1200px) {
+  .related-tracks {
+    .rt-heading {
+      .none {
+        display: none;
+      }
+    }
+    .rt-wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .related-tracks {
+
+    .rt-heading {
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    .rt-wrapper {
+      grid-template-columns: 1fr;
+      gap: getSpacing(sm);
+    }
+  }
+}

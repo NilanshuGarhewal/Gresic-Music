@@ -60,3 +60,53 @@
 .beat-container:hover {
   background-color: #303030;
 }
+
+@media (max-width: 1024px) {
+  .beat {
+    width: 100%;
+    height: 80px;
+
+    .beat-container {
+      width: 100%;
+      height: 100%;
+      flex-direction: row;
+      padding: 5px;
+      border-radius: 5px;
+      gap: getSpacing(md);
+
+      .beat-box-1 {
+        width: 70px;
+        height: 70px;
+        padding: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .beat-box-2 {
+        flex: 1;
+        gap: getSpacing(xs);
+
+        .beat-info-1 {
+          .beat-bpm {
+            color: $fg-secondary;
+          }
+        }
+
+        .beat-info-2 {
+          .genre-wrapper {
+            .genre-box {
+              padding: 0.3rem 0.8rem;
+            }
+
+          }
+          .card-play {
+            padding: 0.3rem 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

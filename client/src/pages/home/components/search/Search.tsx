@@ -15,10 +15,6 @@ const Search = () => {
           </span>
 
           <div className="search-container">
-            {/* <div className="search-box">
-              <input type="text" placeholder="Search" />
-            </div> */}
-
             <div className="search-btn button">Search</div>
           </div>
         </div>

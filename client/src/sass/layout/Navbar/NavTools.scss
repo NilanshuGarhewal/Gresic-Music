@@ -15,3 +15,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .nav-tools {
+     gap: getSpacing(sm);
+    .nav-tool {
+      .none {
+        display: none;
+      }
+    }
+  }
+}

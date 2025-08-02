@@ -28,3 +28,23 @@
     width: auto;
   }
 }
+
+@media (max-width: 1200px) {
+  .show-track-more {
+    grid-template-columns: repeat(3, 1fr);
+    gap: getSpacing(lg);
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .show-track-more {
+    grid-template-columns: repeat(2, 1fr);
+    gap: getSpacing(lg);
+    height: auto;
+
+    .st-box {
+      align-items: center;
+    }
+  }
+}

@@ -26,3 +26,39 @@
     gap: getSpacing(md);
   }
 }
+
+@media (max-width: 1024px) {
+  .track-tools {
+    .genre-wrapper {
+      flex: 1;
+    }
+
+    .det-col {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .det-key {
+      display: none;
+    }
+
+    .purchase-wrapper {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .track-tools {
+    flex: 1;
+
+    .genre-wrapper {
+      display: none;
+    }
+
+    .det-col {
+      width: auto;
+      margin-right: 5px;
+    }
+  }
+}

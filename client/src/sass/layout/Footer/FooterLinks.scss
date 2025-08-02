@@ -23,3 +23,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer-box-2 {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+
+    .none {
+      display: none;
+    }
+    
+  }
+}

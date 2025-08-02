@@ -30,6 +30,7 @@ const BeatCard = ({ beat, index }: BeatCardProps) => {
 
   return (
     <Link to={`/track/${beat?._id}`} key={index} className="beat uni-link">
+      
       <div className="beat-container">
         <div className="beat-box-1">
           <img src={beat.coverImage} alt="" />

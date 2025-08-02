@@ -30,3 +30,15 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .track-wrapper {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .track-wrapper {
+    width: 85%;
+  }
+}

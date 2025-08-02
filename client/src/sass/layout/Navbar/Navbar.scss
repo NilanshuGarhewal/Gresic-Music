@@ -20,3 +20,46 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .navbar {
+    height: 4rem;
+    .location {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 4rem;
+    .nav-wrapper {
+      padding: 0 getSpacing(lg);
+
+      .nav-container {
+        width: 100%;
+      }
+    }
+
+    .location {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 4rem;
+    .nav-wrapper {
+      padding: 0 getSpacing(md);
+
+      .nav-container {
+        width: 100%;
+      }
+    }
+
+    .location {
+      display: none;
+    }
+  }
+}

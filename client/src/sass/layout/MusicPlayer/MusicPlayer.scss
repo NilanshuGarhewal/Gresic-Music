@@ -113,3 +113,31 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .music-player {
+    .music-player-more {
+      padding: 0 getSpacing(lg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .music-player {
+    .music-player-more {
+      padding: 0 getSpacing(sm);
+
+      .music-player-detail {
+        flex: 1;
+      }
+
+      .music-player-controls {
+        width: auto;
+      }
+
+      .music-player-tools {
+       display: none;
+      }
+    }
+  }
+}
