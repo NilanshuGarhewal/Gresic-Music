@@ -29,12 +29,16 @@ app.use(express.json());
 
 // MONGO DB
 
-const URL = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/gresicmusic";
+const URL = process.env.MONGO_URI;
 
-mongoose
-  .connect(URL)
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.error(err));
+if (URL) {
+  mongoose
+    .connect(URL)
+    .then(() => console.log("MongoDB Connected"))
+    .catch((err) => console.error(err));
+} else {
+  throw new Error("NO URL FOUND!");
+}
 
 // --------------------------------------------->
 // --------------------------------------------->
