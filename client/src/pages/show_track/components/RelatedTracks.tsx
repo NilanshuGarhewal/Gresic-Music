@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import BeatCard from "../../../components/common/BeatCard/BeatCard";
+import BeatCard from "../../../components/common/beat_card/BeatCard";
 
 const PreviewSection = () => {
   type Beat = {

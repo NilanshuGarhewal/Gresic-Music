@@ -3,7 +3,7 @@
 import FooterDetails from "./components/FooterDetails";
 import FooterLinks from "./components/FooterLinks";
 import FooterLogo from "./components/FooterLogo";
-import FooterCard from "../../components/FooterCard/FooterCard";
+import FooterCard from "../../components/footer_card/FooterCard";
 
 export default function Footer() {
   return (

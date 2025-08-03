@@ -9,51 +9,49 @@
 @import "./base/typography";
 
 // COMPONENTS
-@import "./components/BeatCard/BeatCard.scss";
-@import "./components/FooterCard/FooterCard.scss";
-@import "./components/Wavesurfer/Wavesurfer.scss";
+@import "./components/beat_card/BeatCard.scss";
+@import "./components/footer_card/FooterCard.scss";
 
 // LAYOUT
 
 // NAVBAR
-@import "./layout/Navbar/Navbar.scss";
-@import "./layout/Navbar/NavLogo.scss";
-@import "./layout/Navbar/NavSearch.scss";
-@import "./layout/Navbar/NavTools.scss";
-@import "./layout/Navbar/Location.scss";
+@import "./layout/navbar/Navbar.scss";
+@import "./layout/navbar/NavLogo.scss";
+@import "./layout/navbar/NavSearch.scss";
+@import "./layout/navbar/NavTools.scss";
+@import "./layout/navbar/Location.scss";
 
 // FOOTER
 
-@import "./layout/Footer/Footer.scss";
-@import "./layout/Footer/FooterDetails.scss";
-@import "./layout/Footer/FooterLogo.scss";
-@import "./layout/Footer/FooterLinks.scss";
+@import "./layout/footer/Footer.scss";
+@import "./layout/footer/FooterDetails.scss";
+@import "./layout/footer/FooterLogo.scss";
+@import "./layout/footer/FooterLinks.scss";
 
 // MUSIC PLAYER
 
-@import "./layout/MusicPlayer/MusicPlayer.scss";
-@import "./layout/Player/Player.scss";
+@import "./layout/music_player/MusicPlayer.scss";
 
 // PAGES
 
 // HOME
-@import "./pages/Home/Home.scss";
-@import "./pages/Home/HeroSection.scss";
-@import "./pages/Home/SearchSection.scss";
-@import "./pages/Home/PreviewSection.scss";
+@import "./pages/home/Home.scss";
+@import "./pages/home/HeroSection.scss";
+@import "./pages/home/SearchSection.scss";
+@import "./pages/home/PreviewSection.scss";
 
 // Track
-@import "./pages/Track/Track.scss";
-@import "./pages/Track/Filters.scss";
-@import "./pages/Track/TrackContainer.scss";
-@import "./pages/Track/TrackCard.scss";
-@import "./pages/Track/TrackTools.scss";
-@import "./pages/Track/TrackWrapper.scss";
+@import "./pages/track/Track.scss";
+@import "./pages/track/Filters.scss";
+@import "./pages/track/TrackContainer.scss";
+@import "./pages/track/TrackCard.scss";
+@import "./pages/track/TrackTools.scss";
+@import "./pages/track/TrackWrapper.scss";
 
 // SHOW TRACK
-@import "./pages/ShowTrack/ShowTrack.scss";
-@import "./pages/ShowTrack/ShowTrackMore.scss";
-@import "./pages/ShowTrack/RelatedTracks.scss";
+@import "./pages/show_track/ShowTrack.scss";
+@import "./pages/show_track/ShowTrackMore.scss";
+@import "./pages/show_track/RelatedTracks.scss";
 
 // ABOUT
-@import "./pages/About/About.scss";
+@import "./pages/about/About.scss";

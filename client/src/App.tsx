@@ -1,15 +1,15 @@
-import Navbar from "./layouts/Navbar/Navbar";
-import Footer from "./layouts/Footer/Footer";
+import Navbar from "./layouts/navbar/Navbar";
+import Footer from "./layouts/footer/Footer";
 
-// import About from "./pages/About/About";
-import Home from "./pages/Home/Home";
-import Tracks from "./pages/Track/Tracks";
-import TrackInfo from "./pages/ShowTrack/TrackInfo";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Tracks from "./pages/track/Tracks";
+import TrackInfo from "./pages/show_track/TrackInfo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-// import Player from "./layouts/MusicPlayer/Player";
-import MusicPlayer from "./layouts/MusicPlayer/MusicPlayer";
+
+import MusicPlayer from "./layouts/music_player/MusicPlayer";
 
 function App() {
   const [songTitleForLocation, setSongTitleForLocation] = useState("");
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
-        {/* <Route path="/about" element={<About />}></Route> */}
+        <Route path="/about" element={<About />}></Route>
 
         <Route path="/tracks" element={<Tracks />}></Route>
 
@@ -38,7 +38,6 @@ function App() {
 
       <Footer />
 
-      {/* <Player /> */}
       <MusicPlayer />
     </BrowserRouter>
   );

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import usePreviousRoute from "../../../components/common/PreviousRoute/PreviousRoute";
+import usePreviousRoute from "../../../components/common/prev_route/PreviousRoute";
 
 interface LocationProps {
   songTitleForLocation: string;

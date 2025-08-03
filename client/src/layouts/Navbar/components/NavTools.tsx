@@ -8,11 +8,11 @@ const NavTools = () => {
           Home
         </Link>
       </div>
-      {/* <div className="nav-tool">
+      <div className="nav-tool">
         <Link to={"/about"} className="nav-link uni-link none">
           About
         </Link>
-      </div> */}
+      </div>
       <div className="nav-tool">
         <Link to={"/tracks"} className="nav-link uni-link">
           Browse
