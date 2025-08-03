@@ -1,0 +1,31 @@
+.footer-box-1 {
+  @include half-full;
+
+  .f-logo {
+    font-size: 6rem;
+    @include flex-start-center;
+
+    .f-logo-text {
+      opacity: 0.2;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-box-1 {
+    .f-logo {
+      flex-direction: column;
+      line-height: 0.8;
+      align-items: start;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-box-1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,38 @@
+.track-container {
+  flex: 1;
+  height: calc(100vh - 6rem - (getSpacing(md) * 2));
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  gap: getSpacing(md);
+  border: 2px solid $bg-border;
+  border-radius: 1rem;
+  padding: getSpacing(md);
+  padding-bottom: 100px;
+
+  .tc-head {
+    font-size: 3rem;
+  }
+
+  .tc-wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: getSpacing(sm);
+
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-container {
+    border: none;
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+
+    .tc-head {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.nav-tools {
+  @include auto-full;
+  @include flex-center;
+  gap: getSpacing(lg);
+
+  .nav-tool {
+    .nav-link {
+      cursor: pointer;
+      color: $fg-secondary;
+    }
+
+    :hover {
+      color: $fg-primary;
+      transition: getTransition3(color);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-tools {
+     gap: getSpacing(sm);
+    .nav-tool {
+      .none {
+        display: none;
+      }
+    }
+  }
+}

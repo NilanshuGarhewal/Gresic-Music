@@ -1,0 +1,43 @@
+.about {
+    width: 100%;
+    height: 100vh;
+    @include flex-coloumn-center;
+    gap: getSpacing(xl);
+
+    .about-head {
+        font-size: 5rem;
+    }
+
+    .a-links {
+        display: flex;
+        gap: getSpacing(xl);
+
+        a {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            @include flex-center;
+            background-color: $bg-secondary;
+            text-decoration: none;
+            color: $fg-primary;
+            transition: all .1s ease-in;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media (max-width: 655px) {
+    .about {
+        .about-head {
+            font-size: 3rem;
+        }
+
+        .a-links {
+            flex-direction: column;
+            gap: getSpacing(sm);
+        }
+    }
+}

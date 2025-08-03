@@ -1,0 +1,64 @@
+.track-tools {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  gap: getSpacing(md);
+
+  .genre-wrapper {
+    width: 50%;
+    height: auto;
+    display: flex;
+    gap: getSpacing(sm);
+  }
+
+  .det-col {
+    width: 10%;
+  }
+
+  .purchase-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: getSpacing(md);
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-tools {
+    .genre-wrapper {
+      flex: 1;
+    }
+
+    .det-col {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .det-key {
+      display: none;
+    }
+
+    .purchase-wrapper {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .track-tools {
+    flex: 1;
+
+    .genre-wrapper {
+      display: none;
+    }
+
+    .det-col {
+      width: auto;
+      margin-right: 5px;
+    }
+  }
+}
