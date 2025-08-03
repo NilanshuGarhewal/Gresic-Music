@@ -8,7 +8,7 @@ const FooterDetails = () => {
       <div className="f-made-by">
         <p className="sm-text">
           Website by&nbsp;
-          <a href="#" className="real-link-u">
+          <a href="https://www.youtube.com/@gresic1" className="real-link-u">
             Nilanshu Garhewal
           </a>
         </p>

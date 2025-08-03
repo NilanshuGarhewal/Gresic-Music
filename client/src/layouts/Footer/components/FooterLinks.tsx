@@ -23,7 +23,7 @@ const FooterLinks = () => {
           <Link to={"/"} className="f-data-text real-link">
             Home
           </Link>
-          <a href="#search" className="f-data-text real-link">
+          <a href="https://www.youtube.com/@gresic1" className="f-data-text real-link">
             Search
           </a>
           <Link to={"/about"} className="f-data-text real-link">
