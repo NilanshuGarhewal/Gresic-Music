@@ -1,8 +1,12 @@
 .footer-box-2 {
-  @include half-full;
+  width: auto;
+  height: 100%;
   @include flex-end-center;
   gap: getSpacing(xl);
   align-items: start;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 0.8rem;
 
   .f-box-1 {
     @include flex-coloumn-center-start;
@@ -14,25 +18,45 @@
 
       .f-data-text {
         cursor: pointer;
+        color: $fg-primary;
       }
 
       .f-data-text:hover {
-        color: $fg-primary;
         text-decoration: underline;
       }
     }
   }
 }
 
+@media (max-width: 1024px) {
+  .footer-box-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: getSpacing(xl) getSpacing(md);
+  }
+}
+
 @media (max-width: 768px) {
   .footer-box-2 {
     width: 100%;
-    height: auto;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
-    .none {
-      display: none;
+@media (max-width: 550px) {
+  .footer-box-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+    .f-box-1 {
+      align-items: center;
+
+      .f-box-data {
+        align-items: center;
+      }
     }
-    
   }
 }

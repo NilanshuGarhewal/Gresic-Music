@@ -1,4 +1,3 @@
-import tempImg from "../../assets/images/test.jpg";
 import { PlayIcon, PauseIcon } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -148,7 +147,7 @@ const MusicPlayer = () => {
           className="music-player-detail uni-link"
         >
           <div className="mp-img">
-            <img src={tempImg} alt={currentTrack.title} />
+            <img src={currentTrack.coverImage} alt={currentTrack.title} />
           </div>
           <div className="mp-text">
             <p className="mp-title">{currentTrack.title}</p>

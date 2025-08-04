@@ -18,12 +18,15 @@ const FooterLinks = () => {
   return (
     <div className="footer-box-2">
       <div className="f-box-1">
-        <div className="f-box-header">Routes</div>
+        <div className="f-box-header">PAGES</div>
         <div className="f-box-data">
           <Link to={"/"} className="f-data-text real-link">
             Home
           </Link>
-          <a href="https://www.youtube.com/@gresic1" className="f-data-text real-link">
+          <a
+            href="https://www.youtube.com/@gresic1"
+            className="f-data-text real-link"
+          >
             Search
           </a>
           <Link to={"/about"} className="f-data-text real-link">
@@ -32,32 +35,20 @@ const FooterLinks = () => {
           <Link to={"/tracks"} className="f-data-text real-link">
             Browse
           </Link>
-        </div>
-      </div>
-
-      <div className="f-box-1">
-        <div className="f-box-header">Social</div>
-        <div className="f-box-data">
-          <a href={links.social.youtube} className="f-data-text real-link">
-            YouTube
-          </a>
-          <a href={links.social.instagram} className="f-data-text real-link">
-            Instagram
-          </a>
-          <a href={links.social.soundcloud} className="f-data-text real-link">
-            SoundCloud
-          </a>
+          <Link to={"/log"} className="f-data-text real-link">
+            Release Notes
+          </Link>
         </div>
       </div>
 
       <div className="f-box-1 none">
-        <div className="f-box-header">Nilanshu's Social</div>
+        <div className="f-box-header">RESOURCES</div>
         <div className="f-box-data">
           <a
             href={links.nilanshuSocial.portfolio}
             className="f-data-text real-link"
           >
-            Portfolio
+            illpeoplemusic
           </a>
           <a
             href={links.nilanshuSocial.linkedin}
@@ -71,6 +62,42 @@ const FooterLinks = () => {
           >
             GitHub
           </a>
+          <a
+            href={links.nilanshuSocial.github}
+            className="f-data-text real-link"
+          >
+            BandLab Distrubution
+          </a>
+          <a
+            href={links.nilanshuSocial.github}
+            className="f-data-text real-link"
+          >
+            SoundCloud Distribution
+          </a>
+        </div>
+      </div>
+
+      <div className="f-box-1">
+        <div className="f-box-header">NILANSHU'S SOCIAL</div>
+        <div className="f-box-data">
+          <Link to={"/"} className="f-data-text real-link">
+            LinkedIn
+          </Link>
+          <a
+            href="https://www.youtube.com/@gresic1"
+            className="f-data-text real-link"
+          >
+            GitHub
+          </a>
+          <Link to={"/about"} className="f-data-text real-link">
+            Internshala
+          </Link>
+          <Link to={"/tracks"} className="f-data-text real-link">
+            Instagram
+          </Link>
+          <Link to={"/log"} className="f-data-text real-link">
+            Figma
+          </Link>
         </div>
       </div>
     </div>

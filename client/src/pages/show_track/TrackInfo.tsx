@@ -58,10 +58,17 @@ const TrackInfo = ({
     }
   };
 
+  const apiLink = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     if (!id) return;
 
-    fetch(`https://gresic-server.onrender.com/track/${id}`)
+    if (!apiLink) {
+      console.error("API URL is not defined!");
+      return;
+    }
+
+    fetch(`${apiLink}track/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSingleBeat(data);
@@ -69,7 +76,7 @@ const TrackInfo = ({
         setSongTitleForLocation(data.title);
       })
       .catch((err) => console.log(err));
-  }, [id, setSongTitleForLocation]);
+  }, [id, apiLink, setSongTitleForLocation]);
 
   const handleCopyLink = async () => {
     try {
@@ -90,7 +97,6 @@ const TrackInfo = ({
 
   return (
     <div className="track-info">
-      
       <div className="track-info-wrapper">
         <div className="show-track-wrapper">
           <div className="show-track-img">

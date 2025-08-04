@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import BeatCard from "../../../components/common/beat_card/BeatCard";
 
 const PreviewSection = () => {
+  const apiLink = process.env.REACT_APP_API_URL;
+
   type Beat = {
     _id: string;
     title?: string;
@@ -21,13 +23,18 @@ const PreviewSection = () => {
   const [allBeats, setAllBeats] = useState<Beat[]>([]);
 
   useEffect(() => {
-    fetch("https://gresic-server.onrender.com/")
+    if (!apiLink) {
+      console.error("API URL is not defined!");
+      return;
+    }
+
+    fetch(apiLink)
       .then((res) => res.json())
       .then((data) => {
         setAllBeats(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [apiLink]);
 
   return (
     <div className="related-tracks">

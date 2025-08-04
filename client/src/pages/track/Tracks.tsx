@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 // import Filters from "./components/FIlters";
 import TrackContainer from "./components/TrackContainer";
 
+
 const Tracks = () => {
+  const apiLink = process.env.REACT_APP_API_URL;
+
   type Beat = {
     _id: string;
     title?: string;
@@ -10,7 +13,7 @@ const Tracks = () => {
     audioUrl: string;
     genre?: string[];
     mood?: string[];
-    scale: string,
+    scale: string;
     duration?: string;
     price?: string;
     description?: string;
@@ -20,23 +23,26 @@ const Tracks = () => {
   const [allBeats, setAllBeats] = useState<Beat[]>([]);
 
   useEffect(() => {
-    fetch("https://gresic-server.onrender.com/")
+    if (!apiLink) {
+      console.error("API URL is not defined!");
+      return;
+    }
+
+    fetch(apiLink)
       .then((res) => res.json())
       .then((data) => {
         setAllBeats(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [apiLink]);
 
   return (
     <div className="tracks">
       {/* <Filters /> */}
 
-      <TrackContainer allBeats={allBeats}/>
+      <TrackContainer allBeats={allBeats} />
     </div>
   );
 };
 
 export default Tracks;
-
-

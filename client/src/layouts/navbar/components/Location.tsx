@@ -29,6 +29,8 @@ const Location = ({
       setSongTitleForLocation("");
     } else if (pathname.startsWith("/track")) {
       setPath("Tracks");
+    } else if (pathname.startsWith("/log")) {
+      setPath("Release Notes");
     } else {
       setPath("Unknown");
     }

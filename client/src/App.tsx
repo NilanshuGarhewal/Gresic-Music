@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import MusicPlayer from "./layouts/music_player/MusicPlayer";
+import ChannalLog from "./pages/channallog/ChannalLog";
 
 function App() {
   const [songTitleForLocation, setSongTitleForLocation] = useState("");
@@ -27,6 +28,8 @@ function App() {
         <Route path="/about" element={<About />}></Route>
 
         <Route path="/tracks" element={<Tracks />}></Route>
+
+        <Route path="/log" element={<ChannalLog />}></Route>
 
         <Route
           path="/track/:id"

@@ -2,27 +2,33 @@
   width: 100%;
   height: auto;
   @include flex-coloumn-center;
-  padding: 0 getSpacing(xxl);
+  background-color: $primary;
+  background-image: url("../../../assets/images/grilled-noise.png");
+  margin-top: 6rem;
 
   .footer-links-wrapper {
     width: 100%;
     height: auto;
-    @include flex-space-between-center;
-    border-top: 2px solid $bg-border;
-    padding: getSpacing(xl) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: getSpacing(xl) getSpacing(xxl);
+    padding-bottom: getSpacing(lg);
   }
 }
 
 @media (max-width: 1024px) {
   .footer {
-    padding: 0 getSpacing(lg);
+    .footer-links-wrapper {
+      padding: getSpacing(xl);
+    }
   }
 }
 
 @media (max-width: 768px) {
   .footer {
     padding: 0 getSpacing(md);
-    
+
     .footer-links-wrapper {
       flex-direction: column;
       gap: getSpacing(lg);

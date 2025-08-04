@@ -1,5 +1,10 @@
 .footer-box-1 {
-  @include half-full;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: getSpacing(lg);
 
   .f-logo {
     font-size: 6rem;
@@ -7,6 +12,20 @@
 
     .f-logo-text {
       opacity: 0.2;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: getSpacing(md);
+
+    a {
+      color: $fg-primary;
+      width: 50px;
+      height: 50px;
+      background-color: $secondary;
+      border-radius: 50%;
+      @include flex-center;
     }
   }
 }
@@ -27,5 +46,26 @@
     height: auto;
     display: flex;
     justify-content: center;
+    text-align: center;
+
+    .f-logo {
+      @include flex-center;
+      flex-direction: row;
+      // font-size: ;
+    }
+
+    .social-links {
+      width: 100%;
+      height: auto;
+      @include flex-center;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-box-1 {
+    .f-logo {
+      font-size: 4rem;
+    }
   }
 }
