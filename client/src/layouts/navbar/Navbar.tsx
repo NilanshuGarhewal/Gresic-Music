@@ -1,4 +1,4 @@
-import Location from "./components/Location";
+// import Location from "./components/Location";
 import NavLogo from "./components/NavLogo";
 import NavSearch from "./components/NavSearch";
 import NavTools from "./components/NavTools";
@@ -24,10 +24,10 @@ const Navbar = ({
         </div>
       </div>
 
-      <Location
+      {/* <Location
         songTitleForLocation={songTitleForLocation}
         setSongTitleForLocation={setSongTitleForLocation}
-      />
+      /> */}
     </div>
   );
 };

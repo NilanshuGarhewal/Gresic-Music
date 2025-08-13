@@ -1,5 +1,5 @@
 import Navbar from "./layouts/navbar/Navbar";
-import Footer from "./layouts/footer/Footer";
+// import Footer from "./layouts/footer/Footer";
 
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -11,6 +11,7 @@ import { useState } from "react";
 
 import MusicPlayer from "./layouts/music_player/MusicPlayer";
 import ChannalLog from "./pages/channallog/ChannalLog";
+import NewFooter from "./layouts/footer/NewFooter";
 
 function App() {
   const [songTitleForLocation, setSongTitleForLocation] = useState("");
@@ -39,7 +40,9 @@ function App() {
         ></Route>
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
+
+      <NewFooter />
 
       <MusicPlayer />
     </BrowserRouter>

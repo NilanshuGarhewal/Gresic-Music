@@ -1,26 +1,154 @@
+// ===========================
+// Footer Styles
+// ===========================
+
+// Root Footer Element
+footer {
+  width: 100vw;
+  height: calc(100vh - 4rem);
+}
+
+// ===========================
+// Main Footer Wrapper
+// ===========================
 .footer {
-  width: 100%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include full-auto;
+  padding: 0 getSpacing(xxl) 0;
+
   @include flex-coloumn-center;
-  background-color: $primary;
+  background-color: $bg-primary;
   background-image: url("../../../assets/images/grilled-noise.png");
   margin-top: 6rem;
 
-  .footer-links-wrapper {
-    width: 100%;
-    height: auto;
+  // =========================
+  // Top Section
+  // =========================
+  .footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    padding: getSpacing(xl) getSpacing(xxl);
-    padding-bottom: getSpacing(lg);
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: getSpacing(xl) 0;
+
+    .footer-left {
+      flex: 1;
+
+      p {
+        font-size: 1rem;
+        color: $fg-secondary;
+        opacity: 0.7;
+      }
+
+      .btn {
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  // =========================
+  // Links, Offices & Social
+  // =========================
+  .footer-links,
+  .footer-offices,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-offices {
+    line-height: 1;
+    color: $fg-secondary;
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  // =========================
+  // Middle Section
+  // =========================
+  .footer-mid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: getSpacing(xl);
+  }
+
+  // =========================
+  // Bottom Section
+  // =========================
+  .footer-bottom {
+    font-size: 0.8rem;
+    color: $fg-secondary;
+    opacity: 0.7;
+  }
+
+  // =========================
+  // Brand Name
+  // =========================
+  .footer-brand {
+    font-size: clamp(4rem, 25vw, 12rem);
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: black;
+    line-height: 1;
+    width: 100%;
+  }
+}
+
+// ===========================
+// Responsive Layout Adjustments
+// ===========================
+
+@media (max-width: 1200px) {
+  .footer {
+
+    .footer-brand {
+      font-size: 10rem;
+    }
   }
 }
 
 @media (max-width: 1024px) {
   .footer {
-    .footer-links-wrapper {
-      padding: getSpacing(xl);
+    padding: 0 getSpacing(lg);
+
+    .footer-top {
+      .footer-left {
+        display: none;
+      }
+    }
+
+    .footer-brand {
+      font-size: 10rem;
     }
   }
 }
@@ -29,10 +157,12 @@
   .footer {
     padding: 0 getSpacing(md);
 
-    .footer-links-wrapper {
-      flex-direction: column;
-      gap: getSpacing(lg);
-      padding: getSpacing(md);
+    .footer-top {
+      justify-content: start;
+    }
+
+    .footer-brand {
+      font-size: 5rem;
     }
   }
 }
