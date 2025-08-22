@@ -188,9 +188,9 @@ const NavPlayer = ({ handleIsOn }: NavPlayerProps) => {
         {/* play/pause button */}
         <div className="player-control" onClick={togglePlay}>
           {isPlaying ? (
-            <PauseIcon weight="fill" size={18} />
+            <PauseIcon className="nav-play-icon" weight="fill"/>
           ) : (
-            <PlayIcon weight="fill" size={18} />
+            <PlayIcon className="nav-play-icon" weight="fill"/>
           )}
         </div>
       </div>

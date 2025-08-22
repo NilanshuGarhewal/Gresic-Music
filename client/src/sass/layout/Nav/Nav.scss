@@ -24,26 +24,3 @@
     }
   }
 }
-
-@media (max-width: 670px) {
-  .nav {
-    height: 4rem;
-    .nav-container {
-      flex-direction: column-reverse;
-      gap: getSpacing(md);
-
-      .nav-links {
-        width: 100%;
-      }
-
-      .divider-n {
-        width: 100%;
-        height: 2px;
-      }
-    }
-  }
-
-  .nav2 {
-    height: 8rem;
-  }
-}
