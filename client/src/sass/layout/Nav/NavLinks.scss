@@ -1,0 +1,53 @@
+.nav-links {
+  @include flex-center;
+  gap: getSpacing(lg);
+  justify-content: space-between;
+
+  .icon {
+    cursor: pointer;
+
+    .icon-title {
+      color: $fg-primary;
+      transition: 0.3s ease;
+      opacity: .3;
+    }
+
+    .icon-underline {
+      width: 0%;
+      height: 2px;
+      background-color: $fg-primary;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      .icon-title {
+        color: $fg-primary;
+        font-size: 20px;
+        opacity: 1;
+      }
+
+      .icon-underline {
+        width: 100%;
+      }
+    }
+  }
+
+  .icon.active .icon-title {
+    color: $fg-primary;
+    opacity: 1;
+  }
+
+  .icon.active .icon-underline {
+    width: 100%;
+  }
+
+  .open {
+    .icon-title {
+      color: $fg-primary;
+    }
+
+    .icon-underline {
+      width: 100%;
+    }
+  }
+}

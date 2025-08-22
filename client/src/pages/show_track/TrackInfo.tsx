@@ -29,11 +29,7 @@ type Beat = {
   coverImage?: string;
 };
 
-const TrackInfo = ({
-  setSongTitleForLocation,
-}: {
-  setSongTitleForLocation: React.Dispatch<React.SetStateAction<string>>;
-}) => {
+const TrackInfo = () => {
   const { id } = useParams();
   const [singleBeat, setSingleBeat] = useState<Beat>();
   const [loading, setLoading] = useState(true);
@@ -73,10 +69,9 @@ const TrackInfo = ({
       .then((data) => {
         setSingleBeat(data);
         setLoading(false);
-        setSongTitleForLocation(data.title);
       })
       .catch((err) => console.log(err));
-  }, [id, apiLink, setSongTitleForLocation]);
+  }, [id, apiLink]);
 
   const handleCopyLink = async () => {
     try {

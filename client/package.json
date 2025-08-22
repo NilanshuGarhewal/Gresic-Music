@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/pixi.js": "^4.8.9",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "sass": "^1.89.2"

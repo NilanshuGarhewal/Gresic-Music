@@ -1,27 +1,23 @@
-import Navbar from "./layouts/navbar/Navbar";
-// import Footer from "./layouts/footer/Footer";
-
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Tracks from "./pages/track/Tracks";
 import TrackInfo from "./pages/show_track/TrackInfo";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
-import MusicPlayer from "./layouts/music_player/MusicPlayer";
 import ChannalLog from "./pages/channallog/ChannalLog";
 import NewFooter from "./layouts/footer/NewFooter";
+import Nav from "./layouts/Nav/Nav";
+// import MusicPlayer from "./layouts/music_player/MusicPlayer";
+
+// import useWindowSize from "./types/WindowSize";
 
 function App() {
-  const [songTitleForLocation, setSongTitleForLocation] = useState("");
+  // const width = useWindowSize();
 
   return (
     <BrowserRouter>
-      <Navbar
-        songTitleForLocation={songTitleForLocation}
-        setSongTitleForLocation={setSongTitleForLocation}
-      />
+      <Nav />
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -32,19 +28,10 @@ function App() {
 
         <Route path="/log" element={<ChannalLog />}></Route>
 
-        <Route
-          path="/track/:id"
-          element={
-            <TrackInfo setSongTitleForLocation={setSongTitleForLocation} />
-          }
-        ></Route>
+        <Route path="/track/:id" element={<TrackInfo />}></Route>
       </Routes>
 
-      {/* <Footer /> */}
-
       <NewFooter />
-
-      <MusicPlayer />
     </BrowserRouter>
   );
 }
