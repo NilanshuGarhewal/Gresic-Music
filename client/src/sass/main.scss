@@ -15,11 +15,6 @@
 // LAYOUT
 
 // NAVBAR
-@import "./layout/navbar/Navbar.scss";
-@import "./layout/navbar/NavLogo.scss";
-@import "./layout/navbar/NavSearch.scss";
-@import "./layout/navbar/NavTools.scss";
-@import "./layout/navbar/Location.scss";
 
 @import "./layout/Nav/Nav.scss";
 @import "./layout/Nav/NavLinks.scss";
@@ -28,15 +23,9 @@
 @import "./layout/Nav/ResponsiveNavbar.scss";
 
 // FOOTER
-
-@import "./layout/footer/Footer.scss";
-@import "./layout/footer/FooterDetails.scss";
-@import "./layout/footer/FooterLogo.scss";
-@import "./layout/footer/FooterLinks.scss";
-
-// MUSIC PLAYER
-
-@import "./layout/music_player/MusicPlayer.scss";
+@import "./layout/Footer/Footer.scss";
+@import "./layout/Footer/FooterContainer.scss";
+@import "./layout/Footer/FooterDots.scss";
 
 // PAGES
 

@@ -1,24 +1,21 @@
+// IMPORTS
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// PAGES / ROUTES
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Tracks from "./pages/track/Tracks";
 import TrackInfo from "./pages/show_track/TrackInfo";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import ChannalLog from "./pages/channallog/ChannalLog";
-import NewFooter from "./layouts/footer/NewFooter";
+// LAYOUTS
 import Nav from "./layouts/Nav/Nav";
-// import MusicPlayer from "./layouts/music_player/MusicPlayer";
+import Footer from "./layouts/Footer/Footer";
 
-// import useWindowSize from "./types/WindowSize";
-
-function App() {
-  // const width = useWindowSize();
-
+// MAIN APP
+const App = () => {
   return (
     <BrowserRouter>
-      <Nav />
-
+      {/* ROUTES */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
@@ -26,14 +23,14 @@ function App() {
 
         <Route path="/tracks" element={<Tracks />}></Route>
 
-        <Route path="/log" element={<ChannalLog />}></Route>
-
         <Route path="/track/:id" element={<TrackInfo />}></Route>
       </Routes>
 
-      <NewFooter />
+      {/* LAYOUTS */}
+      <Nav />
+      <Footer />
     </BrowserRouter>
   );
-}
+};
 
 export default App;

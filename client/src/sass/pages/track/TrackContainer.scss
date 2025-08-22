@@ -1,14 +1,13 @@
 .track-container {
   flex: 1;
-  height: calc(100vh - 6rem - (getSpacing(md) * 2));
+  height: calc(100vh - 4rem);
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  padding-bottom: 100px;
   gap: getSpacing(md);
   border: 2px solid $bg-border;
   border-radius: 1rem;
-  padding: getSpacing(md);
+  padding: 0 getSpacing(md);
   padding-bottom: 100px;
 
   .tc-head {

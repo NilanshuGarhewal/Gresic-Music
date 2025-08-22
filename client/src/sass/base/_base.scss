@@ -67,3 +67,16 @@
 .disp {
   display: none;
 }
+
+// UNDERLINE ON HOVER - FOR LINKS
+.uoh {
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .uoh {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

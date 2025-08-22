@@ -2,8 +2,7 @@
   @include full-auto;
   @include flex-space-between-center;
   align-items: start;
-  margin-top: 6rem;
-  padding: getSpacing(md) getSpacing(xxl);
+  padding: 0 getSpacing(xxl);
   gap: getSpacing(md);
 }
 

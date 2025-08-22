@@ -6,6 +6,8 @@
   left: 0;
   @include flex-center;
   z-index: 10000;
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 
   .nav-container {
     @include flex-center;
@@ -23,4 +25,8 @@
       border-radius: 999px;
     }
   }
+}
+
+.hide-nav {
+  transform: translateY(8rem);
 }
