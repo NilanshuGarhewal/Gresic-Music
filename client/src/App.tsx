@@ -8,8 +8,8 @@ import Tracks from "./pages/track/Tracks";
 import TrackInfo from "./pages/show_track/TrackInfo";
 
 // LAYOUTS
-import Nav from "./layouts/navbar/Nav";
-import Footer from "./layouts/footer/Footer";
+import Nav from "./layouts/Nav/Nav";
+import Footer from "./layouts/Footer/Footer";
 
 // MAIN APP
 const App = () => {
