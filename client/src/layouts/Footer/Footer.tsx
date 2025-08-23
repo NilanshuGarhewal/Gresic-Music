@@ -2,8 +2,8 @@
 import React from "react";
 
 // COMPONENTS
-import FooterContainer from "./FooterContainer";
-import FooterWrapper from "./FooterWrapper";
+import FooterContainer from "./components/FooterContainer";
+import FooterWrapper from "./components/FooterWrapper";
 
 const Footer = () => {
   return (
