@@ -1,6 +1,6 @@
 import React from "react";
 
-const FooterDots = () => {
+const FooterWrapper = () => {
   return (
     <div className="footer-dots">
       <p>@gresicmusic - All Rights Reserved.</p>
@@ -16,4 +16,4 @@ const FooterDots = () => {
   );
 };
 
-export default FooterDots;
+export default FooterWrapper;

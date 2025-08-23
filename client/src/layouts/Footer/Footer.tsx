@@ -3,7 +3,7 @@ import React from "react";
 
 // COMPONENTS
 import FooterContainer from "./FooterContainer";
-import FooterDots from "./FooterDots";
+import FooterWrapper from "./FooterWrapper";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className="footer-divider"></div>
 
-      <FooterDots />
+      <FooterWrapper />
     </footer>
   );
 };
