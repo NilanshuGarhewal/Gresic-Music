@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../assets/images/bg-removed-logo.png";
+import gresicLogo from "../../../assets/images/gresic_logo.png";
 
 const FooterContainer = () => {
   return (
     <div className="footer-container">
       <div className="footer-logo">
         <span>
-          <img src={logo} alt="gresicmusic" />
+          <img src={gresicLogo} alt="gresicmusic" />
         </span>
       </div>
 
