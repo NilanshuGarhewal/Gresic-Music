@@ -7,7 +7,7 @@
   @include flex-center;
   z-index: 10000;
   transform: translateY(0);
-  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 
   .nav-container {
     @include flex-center;
@@ -17,16 +17,19 @@
     gap: getSpacing(lg);
     z-index: 80;
     transition: 0.5s ease-in-out;
+    background: #1c1c1e;
+    border: 2px solid $bg-border;
 
     .divider-n {
       width: 2px;
       height: 2rem;
-      background-color: $bg-tertiary;
+      background-color: $bg-border;
       border-radius: 999px;
     }
   }
 }
 
 .hide-nav {
-  transform: translateY(8rem);
+  transform: translateY(10rem);
 }
+

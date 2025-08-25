@@ -1,5 +1,5 @@
 // import HeroSection from "./components/hero/HeroSection";
-import Search from "./components/search/Search";
+// import Search from "./components/search/Search";
 import PreviewSection from "./components/preview/PreviewSection";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <div className="home">
       {/* <HeroSection /> */}
 
-      <Search />
+      {/* <Search /> */}
 
       <div className="vid-frame">
         <p>Remixes</p>

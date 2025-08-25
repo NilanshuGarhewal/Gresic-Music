@@ -1,6 +1,6 @@
 @media (max-width: 670px) {
   .nav {
-    height: 4rem;
+    height: auto;
     bottom: 0;
 
     .nav-container {
@@ -12,18 +12,12 @@
       background: #1c1c1c;
       border: none;
       box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+      padding: calc(getSpacing(md) - getSpacing(xs)) 0;
 
       .nav-links {
+        padding: 0 getSpacing(lg);
         width: 100%;
-        padding: 0 getSpacing(md);
-
-        .icon {
-          &:hover {
-            .icon-title {
-              font-size: 16px;
-            }
-          }
-        }
+        justify-content: space-around;
       }
 
       .nav-player {
@@ -76,6 +70,6 @@
   }
 
   .nav2 {
-    height: 8rem;
+    height: auto;
   }
 }

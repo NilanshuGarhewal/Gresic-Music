@@ -28,7 +28,7 @@ const App = () => {
 
       {/* LAYOUTS */}
       <Nav />
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };

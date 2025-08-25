@@ -5,40 +5,27 @@
 
   .icon {
     cursor: pointer;
+    text-align: center;
+
+    span {
+      font-size: 28px;
+      color: $icons;
+    }
 
     .icon-title {
-      color: $fg-primary;
-      transition: 0.3s ease;
-      opacity: .3;
-    }
-
-    .icon-underline {
-      width: 0%;
-      height: 2px;
-      background-color: $fg-primary;
-      transition: width 0.3s ease;
-    }
-
-    &:hover {
-      .icon-title {
-        color: $fg-primary;
-        font-size: 20px;
-        opacity: 1;
-      }
-
-      .icon-underline {
-        width: 100%;
-      }
+      color: $icons;
+      font-size: 10px;
     }
   }
 
-  .icon.active .icon-title {
-    color: $fg-primary;
-    opacity: 1;
-  }
-
-  .icon.active .icon-underline {
-    width: 100%;
+  .icon.active {
+    span {
+      color: $primary;
+    }
+    .icon-title {
+      color: $primary;
+      opacity: 1;
+    }
   }
 
   .open {

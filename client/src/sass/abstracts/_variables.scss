@@ -1,19 +1,20 @@
 // ALL THE VARIABLES
 
 // COLORS
-$primary: #5f55df;
-$secondary: #7d73ff;
-$tertiary: #a68d5e;
+$primary: #fa2d48;
+$secondary: #ff4e6b;
+$combile: linear-gradient(to bottom, #ff4e6b, #fa2d48);
 
 $fg-primary: #ffffff;
-$fg-secondary: #808080;
+$fg-secondary: rgba(255, 255, 255, 0.3);
+
+$icons: #9899a0;
 
 $bg-primary: #080808;
 $bg-secondary: #161616;
-$bg-tertiary: #4d4d4d;
-$bg-qurinary: #202020;
+$bg-tertiary: #242424;
 
-$bg-border: #262626;
+$bg-border: #363638;
 
 // FONTS
 $font-main: "DM Sans", sans-serif;

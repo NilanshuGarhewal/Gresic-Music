@@ -1,183 +1,264 @@
 .track-info {
-  width: 100%;
-  height: auto;
-  padding: 0 getSpacing(xxl);
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: getSpacing(lg);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .back-icon {
+    padding: getSpacing(sm) 0;
+    color: $fg-primary;
+    cursor: pointer;
+    z-index: 120;
+    position: fixed;
+    top: 1rem;
+  }
 
   .track-info-wrapper {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 
     .show-track-wrapper {
       width: 100%;
       height: auto;
       display: flex;
-      gap: getSpacing(xl);
+      justify-content: space-between;
 
-      .show-track-img {
-        width: 320px;
-        height: 320px;
-        overflow: hidden;
-        border-radius: 0.5rem;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-
-      .show-track-details {
-        width: auto;
-        height: 320px;
+      .st-box1 {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        gap: getSpacing(lg);
 
-        .st-info {
-          width: auto;
-          height: auto;
-          display: flex;
-          flex-direction: column;
+        .st-box-image-wrapper {
+          width: 24rem;
+          height: 24rem;
+          overflow: hidden;
+          border-radius: getSpacing(md);
+          box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+          border: 2px solid rgba($color: #fff, $alpha: 0.1);
 
-          .st-title {
-            font-size: 3rem;
-          }
-
-          .st-artist {
-            color: $fg-secondary;
-          }
-
-          .st-controls {
-            margin-top: getSpacing(md);
-            display: flex;
-            align-items: center;
-            gap: getSpacing(md);
-
-            .st-play {
-              width: 50px;
-              height: 50px;
-              background-color: $primary;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-            }
-
-            .st-tool {
-              width: 2rem;
-              height: 2rem;
-              background-color: $bg-secondary;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-            }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
 
-        .buy-track {
+        .st-box-player-wrapper {
           display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: getSpacing(md);
 
-          .button-sm {
-            background-color: $primary;
+          .st-box-player-wrapper-box {
+            .player-bar-song-name {
+              font-size: 1.5rem;
+              display: none;
+            }
+
+            .player-bar {
+              width: 100%;
+              height: 5px;
+              background: rgba($color: #fff, $alpha: 0.1);
+              border-radius: 2px;
+              overflow: hidden;
+              margin: 8px 0;
+              cursor: pointer;
+            }
+
+            .player-progress {
+              height: 100%;
+              // background: white;
+              border-radius: 999px;
+              transition: width 0.2s linear;
+            }
+
+            .player-song-duration {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              font-size: 12px;
+              opacity: 0.1;
+            }
+          }
+
+          .player-controls {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: getSpacing(md);
+
+            .pc-skip {
+              font-size: 3rem;
+            }
+
+            .pc-play {
+              font-size: 5rem;
+            }
           }
         }
       }
-    }
-  }
-}
 
-.copied-popup {
-  background-color: #222;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 6px;
-  position: absolute;
-  top: 7rem;
-  right: 1rem;
-  font-size: 12px;
-  opacity: 0.95;
-  z-index: 20000;
-  font-size: 1.2rem;
-  animation: fadeInOut 2s ease;
-}
+      .st-box2 {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: getSpacing(lg);
 
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
+        .st-info1 {
+          .st-name {
+            font-size: 4rem;
+          }
 
-// RESPONSIVENESS
+          .st-info-act {
+            display: none;
+            color: #fff;
+            opacity: 0.3;
+          }
+        }
 
-@media (max-width: 1200px) {
-  .track-info {
-    margin-top: 6rem;
-    .track-info-wrapper {
-      flex-direction: column;
-      gap: getSpacing(lg);
+        .st-info2 {
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          gap: getSpacing(lg);
+
+          .st-arr-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: getSpacing(sm);
+
+            .st-arr-wrapper-heading {
+              font-size: 12px;
+              color: $fg-primary;
+              padding: getSpacing(xs);
+              background: rgba($color: #000000, $alpha: 0.3);
+              display: inline;
+              border-radius: getSpacing(sm);
+            }
+
+            .st-arr-wrapper-box {
+              display: flex;
+              gap: getSpacing(sm);
+
+              .st-arr-wrapper-element {
+                background: rgba($color: #000000, $alpha: 0.3);
+                border-radius: getSpacing(sm);
+                padding: getSpacing(sm);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media (max-width: 1024px) {
   .track-info {
-    padding: 0 getSpacing(lg);
+    .track-info-wrapper {
+      width: 100%;
+      justify-content: center;
+
+      .show-track-wrapper {
+        flex-direction: column;
+        width: auto;
+
+        .st-box1 {
+          height: 100vh;
+          padding-top: 6rem;
+          .st-box-player-wrapper {
+            .st-box-player-wrapper-box {
+              .player-bar-song-name {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .st-box2 {
+          margin-bottom: 2rem;
+          align-items: center;
+
+          .st-info1 {
+            .st-name {
+              display: none;
+            }
+
+            .st-info-act {
+              display: block;
+              color: $bg-tertiary;
+              font-size: 10px;
+            }
+          }
+
+          .st-info2 {
+            align-items: center;
+
+            .st-arr-wrapper {
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 476px) {
   .track-info {
-    padding: 0 getSpacing(md);
-    
     .track-info-wrapper {
-      gap: getSpacing(xl);
-      
+
       .show-track-wrapper {
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        gap: getSpacing(md);
 
-        .show-track-img {
-          width: 200px;
-          height: 200px;
+        .st-box1 {
 
+          .st-box-image-wrapper{
+            height: 20rem;
+            width: 20rem;
+          }
 
+          .st-box-player-wrapper {
+            margin-top: 2rem;
+
+            .st-box-player-wrapper-box {
+
+              .player-bar-song-name {
+                
+                display: block;
+              }
+            }
+          }
         }
 
-        .show-track-details {
-          height: auto;
-          
-          .st-info {
-            align-items: center;
+        .st-box2 {
+          margin-bottom: 2rem;
+          align-items: center;
 
-            .st-title {
-              font-size: 2rem;
+          .st-info1 {
+            .st-name {
+              display: none;
             }
 
-            .st-artist {
-              font-size: .8rem;
+            .st-info-act {
+              display: block;
+              color: $bg-tertiary;
+              font-size: 10px;
+            }
+          }
+
+          .st-info2 {
+            align-items: center;
+
+            .st-arr-wrapper {
+              align-items: center;
             }
           }
         }

@@ -15,8 +15,9 @@ const NavLinks = () => {
         to={"/"}
         className={`icon uni-link ${isActive("/") ? "active" : ""}`}
       >
+        <span className="material-icons-round">home</span>
+
         <p className="icon-title">Home</p>
-        <div className="icon-underline"></div>
       </Link>
 
       <Link
@@ -25,16 +26,16 @@ const NavLinks = () => {
           isActive("/tracks") || isActive("/track") ? "active" : ""
         }`}
       >
+        <span className="material-icons-round">grid_view</span>
         <p className="icon-title">Browse</p>
-        <div className="icon-underline"></div>
       </Link>
 
       <Link
         to={"/about"}
         className={`icon uni-link ${isActive("/about") ? "active" : ""}`}
       >
+        <span className="material-icons-round">person</span>
         <p className="icon-title">About</p>
-        <div className="icon-underline"></div>
       </Link>
     </div>
   );

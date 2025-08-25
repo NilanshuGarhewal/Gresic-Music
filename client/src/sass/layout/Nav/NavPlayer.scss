@@ -15,11 +15,6 @@
       object-fit: cover;
       object-position: center;
     }
-
-    &:hover {
-      width: 3rem;
-      height: 3rem;
-    }
   }
 
   .player-container {
@@ -87,14 +82,6 @@
 
     .nav-play-icon {
       font-size: 18px;
-    }
-  }
-
-  &:hover {
-    .player-container {
-      .player-bar {
-        height: 10px;
-      }
     }
   }
 }

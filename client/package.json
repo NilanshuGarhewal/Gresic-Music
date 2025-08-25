@@ -16,6 +16,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "axios": "^1.11.0",
+    "color-thief-browser": "^2.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-h5-audio-player": "^3.10.0",

@@ -1,11 +1,11 @@
-import img from "../../../../assets/images/search_section_img.png";
+// import img from "../../../../assets/images/search_section_img.png";
 
 const Search = () => {
   return (
     <div className="search">
       <div className="search-card">
         <div className="search-image">
-          <img src={img} alt="" />
+          {/* <img src={img} alt="" /> */}
         </div>
 
         <div className="search-wrapper">
