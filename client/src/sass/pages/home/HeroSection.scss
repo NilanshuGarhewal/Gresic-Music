@@ -1,28 +1,8 @@
 .hero-section {
   width: 100%;
-  overflow: hidden;
-
-  .slider-track {
-    display: flex;
-    width: max-content;
-    animation: scroll 60s linear infinite;
-    gap: 20px;
-  }
-
-  .slide {
-    width: rem(800);
-    height: rem(500);
-    object-fit: cover;
-    flex-shrink: 0;
-    border-radius: 12px;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

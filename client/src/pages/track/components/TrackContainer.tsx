@@ -1,4 +1,9 @@
-import TrackCard from "./TrackCard";
+// import TrackCard from "./TrackCard";
+
+// import img from "../../../assets/images/example.jpg";
+import TrackNew from "./TrackNew";
+import TrackLatest from "./TrackLatest";
+import TrackGenre from "./TrackGenre";
 
 type Beat = {
   _id: string;
@@ -14,21 +19,24 @@ type Beat = {
   coverImage?: string;
 };
 
-// props type
-type TrackContainerProps = {
+type BeatProps = {
   allBeats: Beat[];
 };
 
-const TrackContainer = ({ allBeats }: TrackContainerProps) => {
+const TrackContainer = ({ allBeats }: BeatProps) => {
   return (
     <div className="track-container">
-      <div className="tc-head">My Typebeats</div>
+      <span className="tc-heading">
+        <div className="tc-head">Browse</div>
 
-      <div className="tc-wrapper">
-        {allBeats.map((beat, index) => (
-          <TrackCard key={index + 1} beat={beat} />
-        ))}
-      </div>
+        <div className="tc-divider"></div>
+      </span>
+
+      <TrackNew allBeats={allBeats} />
+
+      <TrackLatest allBeats={allBeats} />
+
+      <TrackGenre allBeats={allBeats} />
     </div>
   );
 };

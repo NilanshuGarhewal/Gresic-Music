@@ -2,11 +2,9 @@
 
 // COLORS
 $primary: #fa2d48;
-$secondary: #ff4e6b;
-$combile: linear-gradient(to bottom, #ff4e6b, #fa2d48);
 
 $fg-primary: #ffffff;
-$fg-secondary: rgba(255, 255, 255, 0.3);
+$fg-secondary: rgba(255, 255, 255, 0.2);
 
 $icons: #9899a0;
 
@@ -14,16 +12,11 @@ $bg-primary: #080808;
 $bg-secondary: #161616;
 $bg-tertiary: #242424;
 
-$bg-border: #363638;
+$bg-border: rgba(#363638, 0.3);
 
 // FONTS
-$font-main: "DM Sans", sans-serif;
-
-$font-primary: "Special Gothic Expanded One", sans-serif;
-$font-secondary: "DM Sans", sans-serif;
-
-$font-semi-bold: "Special Gothic Expanded One", sans-serif;
-$font-black: "DM black", sans-serif;
+$font-main: "SF Pro", sans-serif;
+$font-bold: "SF Pro Bold", sans-serif;
 
 // SPACING
 $spacing-scale: (
@@ -33,6 +26,7 @@ $spacing-scale: (
   lg: 2rem,
   xl: 4rem,
   xxl: 6rem,
+  3xl: 8rem,
 );
 
 // Z-INDEX

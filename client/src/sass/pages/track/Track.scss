@@ -1,22 +1,4 @@
 .tracks {
-  @include full-auto;
-  @include flex-space-between-center;
-  align-items: start;
-  padding: 0 getSpacing(xxl);
-  gap: getSpacing(md);
-  margin-bottom: 10rem;
-}
-
-@media (max-width: 1024px) {
-  .tracks {
-    padding: 0 getSpacing(lg);
-    gap: 0;
-    margin-top: 5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .tracks {
-    padding: 0 getSpacing(md);
-  }
+  width: 100%;
+  height: auto;
 }

@@ -39,7 +39,7 @@ const PreviewSection = () => {
   return (
     <div className="preview-section">
       <div className="preview-heading">
-        <p>Newly Released</p>
+        <p>Newly Dropped</p>
         <Link to={"/tracks"} className="border-btn uni-link">
           View All
         </Link>

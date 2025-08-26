@@ -1,37 +1,28 @@
 .track-container {
-  flex: 1;
-  height: calc(100vh - 4rem);
+  width: 100%;
+  height: 100vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: getSpacing(md);
-  border: 2px solid $bg-border;
-  border-radius: 1rem;
-  padding: 0 getSpacing(md);
-  padding-bottom: 100px;
+  padding: getSpacing(xl) 0 getSpacing(3xl);
+  padding-bottom: 220px;
 
-  .tc-head {
-    font-size: 3rem;
-  }
-
-  .tc-wrapper {
+  // HEADING
+  .tc-heading {
     width: 100%;
     height: auto;
-    display: grid;
-    gap: getSpacing(sm);
-
-  }
-}
-
-@media (max-width: 1024px) {
-  .track-container {
-    border: none;
-    padding: 0;
-    height: auto;
-    border-radius: 0;
+    padding: 0 getSpacing(xxl);
 
     .tc-head {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-family: $font-bold;
+    }
+
+    .tc-divider {
+      width: 100%;
+      height: 2px;
+      background: $bg-border;
     }
   }
 }

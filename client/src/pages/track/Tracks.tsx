@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 // import Filters from "./components/FIlters";
 import TrackContainer from "./components/TrackContainer";
 
-
 const Tracks = () => {
   const apiLink = process.env.REACT_APP_API_URL;
 
@@ -38,8 +37,6 @@ const Tracks = () => {
 
   return (
     <div className="tracks">
-      {/* <Filters /> */}
-
       <TrackContainer allBeats={allBeats} />
     </div>
   );

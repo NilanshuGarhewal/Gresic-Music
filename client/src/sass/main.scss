@@ -37,11 +37,12 @@
 
 // Track
 @import "./pages/track/Track.scss";
-@import "./pages/track/Filters.scss";
 @import "./pages/track/TrackContainer.scss";
 @import "./pages/track/TrackCard.scss";
-@import "./pages/track/TrackTools.scss";
-@import "./pages/track/TrackWrapper.scss";
+@import "./pages/track/TrackGenre.scss";
+@import "./pages/track/TrackLatest.scss";
+@import "./pages/track/TrackNew.scss";
+@import "./pages/track/TrackResponsive.scss";
 
 // SHOW TRACK
 @import "./pages/show_track/ShowTrack.scss";

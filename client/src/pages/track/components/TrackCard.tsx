@@ -1,5 +1,5 @@
-import TrackWrapper from "./TrackWrapper";
-import TrackTools from "./TrackTools";
+// import TrackWrapper from "./TrackWrapper";
+// import TrackTools from "./TrackTools";
 import { useDispatch } from "react-redux";
 import { playTrack } from "../../../store/playerSlice";
 
@@ -30,9 +30,9 @@ const TrackCard = ({ beat }: TrackCardProps) => {
 
   return (
     <div className="track-card uni-link" onClick={handlePlay}>
-      <TrackWrapper beat={beat} />
+      {/* <TrackWrapper beat={beat} />
 
-      <TrackTools beat={beat} />
+      <TrackTools beat={beat} /> */}
     </div>
   );
 };

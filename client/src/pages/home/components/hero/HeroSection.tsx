@@ -1,13 +1,9 @@
-import slideImg from "../../../../assets/images/slide.png";
+import React from 'react'
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
-    <div className="hero-section">
-      <div className="slider-track">
-        {[...Array(8)].map((_, i) => (
-          <img key={i} className="slide" src={slideImg} alt="nature" />
-        ))}
-      </div>
-    </div>
-  );
+    <div className='hero-section'>HeroSection</div>
+  )
 }
+
+export default HeroSection
