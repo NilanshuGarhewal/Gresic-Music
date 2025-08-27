@@ -31,7 +31,10 @@ const NavLinks = () => {
         <p className="icon-title">Browse</p>
       </Link>
 
-      <Link to={"/search"} className={`icon uni-link`}>
+      <Link
+        to={"/search"}
+        className={`icon uni-link ${isActive("/search") ? "active" : ""}`}
+      >
         <MagnifyingGlassIcon className="icon-child" weight="regular" />
         <p className="icon-title">Search</p>
       </Link>

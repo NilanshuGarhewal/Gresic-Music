@@ -15,8 +15,52 @@
     padding: 0 getSpacing(xxl);
 
     .tc-head {
-      font-size: 3rem;
-      font-family: $font-bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 3rem;
+        font-family: $font-bold;
+      }
+
+      // .tc-search {
+      //   height: 40px;
+      //   width: 320px;
+      //   background-color: $bg-tertiary;
+      //   border-radius: getSpacing(sm);
+      //   display: flex;
+      //   align-items: center;
+      //   padding: 0 getSpacing(md);
+      //   column-gap: getSpacing(md);
+      //   position: relative;
+
+      //   .tc-search-back {
+      //     color: $primary;
+      //   }
+
+      //   input {
+      //     width: 100%;
+      //     height: 100%;
+      //     border: none;
+      //     outline: none;
+      //     background: transparent;
+      //     color: $fg-primary;
+      //     font-family: $font-main;
+      //     font-size: 1rem;
+      //     caret-color: $primary;
+      //   }
+
+      //   .show-search-container {
+      //     position: absolute;
+      //     width: 100%;
+      //     height: 300px;
+      //     top: 60px;
+      //     left: 0;
+      //     background-color: $bg-tertiary;
+      //     border-radius: getSpacing(sm);
+      //   }
+      // }
     }
 
     .tc-divider {

@@ -50,6 +50,12 @@
 
     .tc-heading {
       padding: 0 getSpacing(md);
+
+      .tc-head {
+        p {
+          font-size: 2rem;
+        }
+      }
     }
 
     // NEW SECTION

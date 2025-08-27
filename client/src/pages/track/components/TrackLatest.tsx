@@ -48,7 +48,7 @@ const TrackLatest = ({ allBeats }: BeatProps) => {
 
               <div className="tc-latest-beat-info">
                 <p className="tc-latest-beat-info-name">{beat.title}</p>
-                <p className="tc-latest-beat-info-genre">{beat.genre?.[0]}</p>
+                <p className="tc-latest-beat-info-genre">{beat.genre?.[0]} &middot; {beat.bpm} BPM</p>
                 <div className="tc-latest-wrapper-beat-divider"></div>
               </div>
             </div>
@@ -69,7 +69,7 @@ const TrackLatest = ({ allBeats }: BeatProps) => {
 
               <div className="tc-latest-beat-info">
                 <p className="tc-latest-beat-info-name">{beat.title}</p>
-                <p className="tc-latest-beat-info-genre">{beat.genre?.[0]}</p>
+                <p className="tc-latest-beat-info-genre">{beat.genre?.[0]} &middot; {beat.bpm} BPM</p>
                 <div className="tc-latest-wrapper-beat-divider"></div>
               </div>
             </div>
@@ -93,7 +93,7 @@ const TrackLatest = ({ allBeats }: BeatProps) => {
 
                 <div className="tc-latest-beat-info">
                   <p className="tc-latest-beat-info-name">{beat.title}</p>
-                  <p className="tc-latest-beat-info-genre">{beat.genre?.[0]}</p>
+                  <p className="tc-latest-beat-info-genre">{beat.genre?.[0]} &middot; {beat.bpm} BPM</p>
                   <div className="tc-latest-wrapper-beat-divider"></div>
                 </div>
               </div>
