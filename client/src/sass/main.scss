@@ -11,6 +11,7 @@
 // COMPONENTS
 @import "./components/beat_card/BeatCard.scss";
 @import "./components/footer_card/FooterCard.scss";
+@import "./components/trail/trail.scss";
 
 // LAYOUT
 
@@ -33,6 +34,7 @@
 @import "./pages/home/Home.scss";
 @import "./pages/home/HeroSection.scss";
 @import "./pages/home/PreviewSection.scss";
+@import "./pages/home/PianoSection.scss";
 
 // Track
 @import "./pages/track/Track.scss";

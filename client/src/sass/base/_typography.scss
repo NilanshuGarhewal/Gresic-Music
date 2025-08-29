@@ -16,7 +16,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Aventa Regular";
+  src: url("../../assets/fonts/aventa-font-family/Aventa-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Aventa Bold";
+  src: url("../../assets/fonts/aventa-font-family/Aventa-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aventa Variable";
+  src: url("../../assets/fonts/aventa-font-family/AventaVariable.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   font-family: $font-main;

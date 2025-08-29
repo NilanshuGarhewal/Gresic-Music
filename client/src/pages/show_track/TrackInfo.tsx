@@ -144,7 +144,7 @@ const TrackInfo = () => {
                 >
                   <div
                     className="player-progress"
-                    style={{ width: `${progress}%`, background: `${barColor}` }}
+                    style={{ width: `${progress}%` }}
                   ></div>
                 </div>
 

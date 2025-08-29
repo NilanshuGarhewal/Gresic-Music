@@ -29,33 +29,10 @@ const BeatCard = ({ beat, index }: BeatCardProps) => {
   };
 
   return (
-    <Link to={`/track/${beat?._id}`} key={index} className="beat uni-link">
-      
-      <div className="beat-container">
+    <Link to={`/track/${beat?._id}`} key={index} className="">
+      <div className="beat-container" onClick={handlePlay}>
         <div className="beat-box-1">
           <img src={beat.coverImage} alt="" />
-        </div>
-
-        <div className="beat-box-2">
-          <div className="beat-info-1">
-            <p className="beat-title">{beat?.title}</p>
-
-            <div className="beat-bpm">{beat?.bpm} BPM</div>
-          </div>
-
-          <div className="beat-info-2">
-            <div className="genre-wrapper">
-              {(beat.genre?.slice(0, 2) || []).map((g, i, arr) => (
-                <span className="genre-box" key={i}>
-                  {g}
-                </span>
-              ))}
-            </div>
-
-            <div className="card-play button-sm" onClick={handlePlay}>
-              Play
-            </div>
-          </div>
         </div>
       </div>
     </Link>

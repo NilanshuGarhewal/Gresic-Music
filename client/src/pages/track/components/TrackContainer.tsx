@@ -1,6 +1,6 @@
 // import TrackCard from "./TrackCard";
 
-import { ArrowLeftIcon } from "@phosphor-icons/react";
+// import { ArrowLeftIcon } from "@phosphor-icons/react";
 
 // import img from "../../../assets/images/example.jpg";
 import TrackNew from "./TrackNew";
@@ -28,18 +28,9 @@ type BeatProps = {
 const TrackContainer = ({ allBeats }: BeatProps) => {
   return (
     <div className="track-container">
-      <span className="tc-heading">
+      <span className="tc-heading bg-blur">
         <div className="tc-head">
           <p>Browse</p>
-
-          {/* <span className="tc-search">
-            <ArrowLeftIcon className="tc-search-back" weight="bold" size={20} />
-            <input type="text" placeholder="Search here..." />
-
-            <div className="show-search-container">
-
-            </div>
-          </span> */}
         </div>
 
         <div className="tc-divider"></div>

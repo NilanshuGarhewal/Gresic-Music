@@ -52,6 +52,7 @@
       padding: 0 getSpacing(md);
 
       .tc-head {
+        padding-top: getSpacing(sm);
         p {
           font-size: 2rem;
         }

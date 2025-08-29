@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: getSpacing(lg);
   margin-top: getSpacing(xl);
+  z-index: 899;
   
   .tc-pop-heading {
     width: 100%;

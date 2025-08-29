@@ -39,14 +39,14 @@ const PreviewSection = () => {
   return (
     <div className="preview-section">
       <div className="preview-heading">
-        <p>Newly Dropped</p>
+        <p>Newly Added</p>
         <Link to={"/tracks"} className="border-btn uni-link">
           View All
         </Link>
       </div>
 
       <div className="preview-wrapper">
-        {allBeats.slice(0, 8).map((beat, index) => (
+        {allBeats.slice(0, 12).map((beat, index) => (
           <BeatCard key={beat._id} beat={beat} index={index} />
         ))}
       </div>

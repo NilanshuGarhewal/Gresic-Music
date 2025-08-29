@@ -72,7 +72,7 @@
 
             .player-progress {
               height: 100%;
-              // background: white;
+              background: rgba($color: #fff, $alpha: 0.1);
               border-radius: 999px;
               transition: width 0.2s linear;
             }
@@ -215,12 +215,9 @@
 @media (max-width: 476px) {
   .track-info {
     .track-info-wrapper {
-
       .show-track-wrapper {
-
         .st-box1 {
-
-          .st-box-image-wrapper{
+          .st-box-image-wrapper {
             height: 20rem;
             width: 20rem;
           }
@@ -229,9 +226,7 @@
             margin-top: 2rem;
 
             .st-box-player-wrapper-box {
-
               .player-bar-song-name {
-                
                 display: block;
               }
             }

@@ -19,21 +19,32 @@
 
 @media (max-width: 768px) {
   .search {
-    padding: getSpacing(xl) getSpacing(md) getSpacing(3xl);
+    padding: calc(getSpacing(xl) - getSpacing(md)) getSpacing(md) getSpacing(3xl);
     gap: getSpacing(sm);
 
     .search-input-box {
       flex-direction: column;
       align-items: start;
-      gap: getSpacing(xs);
+      gap: getSpacing(md);
+      top: 0;
+      padding-top: getSpacing(md);
 
-      .search-heading {
-        font-family: $font-bold;
-        font-size: 2rem;
-      }
+      span {
+        flex-direction: column;
+        align-items: start;
 
-      .search-input {
-        width: 100%;
+        .search-heading {
+          font-family: $font-bold;
+          font-size: 2rem;
+        }
+
+        .search-input {
+          width: 100%;
+        }
+
+        .search-res-divider {
+          display: none;
+        }
       }
     }
 

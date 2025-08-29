@@ -7,15 +7,17 @@
     font-size: 3rem;
     margin-bottom: getSpacing(lg);
     @include flex-start-center;
-    gap: getSpacing(md);
+    gap: getSpacing(md); 
+
+    p {
+      font-family: $font-bold;
+    }
   }
 
   .preview-wrapper {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: getSpacing(lg);
+    display: flex;
   }
 }
 

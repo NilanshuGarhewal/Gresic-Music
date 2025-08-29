@@ -1,7 +1,7 @@
 .search {
   width: 100%;
   height: auto;
-  padding: getSpacing(xl) getSpacing(xxl) getSpacing(3xl);
+  padding: calc(getSpacing(xl) - getSpacing(md)) getSpacing(xxl) getSpacing(3xl);
   display: flex;
   flex-direction: column;
   gap: getSpacing(xs);
@@ -11,43 +11,55 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: getSpacing(md);
-    background-color: $bg-primary;
+    position: sticky;
+    top: 0;
+    padding-top: getSpacing(md);
 
-    .search-heading {
-      font-family: $font-bold;
-      font-size: 3rem;
-    }
-
-    .search-input {
-      width: 460px;
-      height: 40px;
-      background-color: $bg-tertiary;
-      border-radius: getSpacing(sm);
+    span {
+      width: 100%;
+      height: auto;
       display: flex;
+      justify-content: start;
       align-items: center;
-      padding: 0 getSpacing(md);
       gap: getSpacing(md);
 
-      .search-icon {
-        color: $primary;
+      .search-heading {
+        font-family: $font-bold;
+        font-size: 3rem;
       }
 
-      input {
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        border: none;
-        outline: none;
-        color: $fg-primary;
-        font-size: 1rem;
-        font-family: $font-main;
-        caret-color: $primary;
+      .search-input {
+        width: 460px;
+        height: 40px;
+        background-color: $bg-tertiary;
+        border-radius: getSpacing(sm);
+        display: flex;
+        align-items: center;
+        padding: 0 getSpacing(md);
+        gap: getSpacing(md);
 
-        &::placeholder {
-          color: $fg-secondary;
+        .search-icon {
+          color: $primary;
+        }
+
+        input {
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: $fg-primary;
+          font-size: 1rem;
+          font-family: $font-main;
+          caret-color: $primary;
+
+          &::placeholder {
+            color: $fg-secondary;
+          }
         }
       }
     }

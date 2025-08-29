@@ -25,12 +25,13 @@
     .tc-card-info {
       display: flex;
       flex-direction: column;
-      gap: getSpacing(sm);
+      // gap: getSpacing(sm);
 
       .tc-card-new {
         font-size: 10px;
         color: $fg-secondary;
         letter-spacing: 7%;
+        margin-bottom: getSpacing(xs);
       }
 
       .tc-card-genre {

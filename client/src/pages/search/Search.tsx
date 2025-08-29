@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ArrowLeftIcon } from "@phosphor-icons/react";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import img from "../../assets/images/example.jpg";
 import { useDispatch } from "react-redux";
 import { playTrack } from "../../store/playerSlice";
@@ -68,21 +68,27 @@ const Search = () => {
 
   return (
     <div className="search">
-      <div className="search-input-box">
-        <p className="search-heading">Search</p>
+      <div className="search-input-box bg-blur">
+        <span>
+          <p className="search-heading">Search</p>
 
-        <div className="search-input">
-          <ArrowLeftIcon className="search-icon" weight="bold" size={20} />
-          <input
-            type="text"
-            placeholder="Search Typebeat, BPM, Scale & More..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </div>
+          <div className="search-input">
+            <MagnifyingGlassIcon
+              className="search-icon"
+              weight="bold"
+              size={24}
+            />
+            <input
+              type="text"
+              placeholder="Search Typebeat, BPM, Scale & More..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
+        </span>
+
+        <div className="search-res-divider"></div>
       </div>
-
-      <div className="search-res-divider"></div>
 
       <div className="search-results">
         <span className="search-res-wrapper">
@@ -97,7 +103,8 @@ const Search = () => {
                   <div className="search-card-info">
                     <p className="sci-title">{beat.title}</p>
                     <p className="sci-more">
-                      {beat.genre?.[0]} &middot; {beat.bpm} BPM
+                      {beat.genre?.[0]} &middot; {beat.bpm} BPM &middot;{" "}
+                      {beat.scale}
                     </p>
                   </div>
 

@@ -3,6 +3,25 @@
   height: 100vh;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .hero-logo-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: getSpacing(lg);
+
+    .web-creator-name {
+      color: rgba($color: #fff, $alpha: .5);
+      text-align: center;
+    }
+
+    .d-mobile {
+      display: none;
+    }
+  }
 }
