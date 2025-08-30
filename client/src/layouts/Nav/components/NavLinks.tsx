@@ -39,13 +39,13 @@ const NavLinks = () => {
         <p className="icon-title">Search</p>
       </Link>
 
-      <Link
+      {/* <Link
         to={"/about"}
         className={`icon uni-link ${isActive("/about") ? "active" : ""}`}
       >
         <span className="material-icons-round icon-child">person</span>
         <p className="icon-title">About</p>
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -4,6 +4,8 @@ import img from "../../assets/images/example.jpg";
 import { useDispatch } from "react-redux";
 import { playTrack } from "../../store/playerSlice";
 
+// import Transition from "../../components/Transition/Transition";
+
 const Search = () => {
   type Beat = {
     _id: string;

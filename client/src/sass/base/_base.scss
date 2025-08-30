@@ -84,3 +84,25 @@
     }
   }
 }
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $primary;
+  transform-origin: right;
+  z-index: 300000;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* This was missing in your image, so I added it */
+  background: $primary; /* This was missing as well, so I added it to ensure a complete transition */
+  transform-origin: left; /* You'll likely want the slide-out to originate from the top for the transition to make sense */
+  z-index: 300000;
+}

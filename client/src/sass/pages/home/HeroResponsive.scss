@@ -1,0 +1,123 @@
+@media (max-width: 1200px) {
+  .home {
+    .hero-section {
+      .hero-logo-container {
+        .piano-section {
+          .piano-key-wrapper {
+            .piano-key {
+              font-size: 7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    .hero-section {
+      padding: getSpacing(xl) getSpacing(lg);
+      .hero-logo-container {
+        .piano-section {
+          .piano-key-wrapper {
+            .piano-key {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+
+      .hero-info-wrapper {
+        gap: getSpacing(lg);
+        .hero-about-wrapper {
+          flex: 1;
+        }
+
+        .hero-links-wrapper {
+          display: flex;
+          justify-content: end;
+          align-items: end;
+          width: auto;
+          height: auto;
+        }
+
+        .hero-link-box {
+          .home-to-browse {
+            width: auto;
+            height: auto;
+            outline: none;
+            border: none;
+            padding: getSpacing(sm) getSpacing(lg);
+            color: white;
+            background: $primary;
+            border-radius: 999px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.5 ease;
+          }
+        }
+
+        .btn2,
+        .btn3,
+        .btn4,
+        .btn5 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    .hero-section {
+      padding: getSpacing(3xl) getSpacing(md) getSpacing(xxl);
+      .hero-logo-container {
+        align-items: center;
+
+        .web-creator-name {
+          text-align: center;
+        }
+        .piano-section {
+          .piano-key-wrapper {
+            .piano-key {
+              font-size: 3rem;
+              padding: 0 0.05rem;
+            }
+          }
+        }
+
+        .web-creator-name {
+          font-size: 12px;
+        }
+
+        .d-mobile {
+          display: block;
+        }
+
+        .d-desktop {
+          display: none;
+        }
+      }
+
+      .hero-info-wrapper {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .hero-about-wrapper { 
+            width: 100%;
+            height: auto;
+            align-items: center;
+
+            .hero-about-content {
+                text-align: center;
+            }
+        }
+      }
+    }
+  }
+}

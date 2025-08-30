@@ -1,16 +1,20 @@
 import TrailContainer from "../../components/Trail/TrailContainer";
-import HeroSection from "./components/hero/HeroSection";
+import HeroSection from "./components/HeroSection";
 
-export default function Home() {
+// import Transition from "../../components/Transition/Transition";
+
+import fffimg from "../../assets/images/gresic_logo.png";
+
+const Home = () => {
   return (
     <div className="home">
-      {/* <FlowBackground/> */}
+      <div className="fff-logo">
+        <img src={fffimg} alt="logo" />
+      </div>
       <TrailContainer />
-
       <HeroSection />
-
-      {/* <PreviewSection /> */}
-
     </div>
   );
-}
+};
+
+export default Home;

@@ -1,69 +1,7 @@
 .home {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   position: relative;
-}
-
-@media (max-width: 1200px) {
-  .home {
-    .hero-section {
-      .hero-logo-container {
-        .piano-section {
-          .piano-key-wrapper {
-            .piano-key {
-              font-size: 7rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .home {
-    .hero-section {
-      .hero-logo-container {
-        .piano-section {
-          .piano-key-wrapper {
-            .piano-key {
-              font-size: 5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .home {
-    .hero-section {
-      .hero-logo-container {
-        .piano-section {
-          .piano-key-wrapper {
-            .piano-key {
-              font-size: 3rem;
-              padding: 0 0.05rem;
-            }
-          }
-        }
-
-        .web-creator-name {
-          font-size: 12px;
-        }
-        
-        .d-mobile {
-          display: block;
-        }
-
-        .d-desktop {
-          display: none;
-        }
-      }
-    }
-  }
 }
