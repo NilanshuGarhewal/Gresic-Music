@@ -21,9 +21,21 @@ const router = express_1.default.Router();
 // --------------------------------------------->
 // GET ALL BEATS ROUTES
 router.get("/", (0, safeRoute_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const beats = yield Beat_1.default.find();
+    const beats = yield Beat_1.default.find().sort({ createdAt: -1 });
     res.status(200).json(beats);
 })));
+// --------------------------------------------->
+// --------------------------------------------->
+// --------------------------------------------->
+// GET 12 RANDOM BEATS
+router.get("/random", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const beats = yield Beat_1.default.aggregate([{ $sample: { size: 24 } }]);
+    res.status(200).json(beats);
+}));
+// --------------------------------------------->
+// --------------------------------------------->
+// --------------------------------------------->
+// GET SINGLE BEAT DATA
 router.get("/track/:id", (0, safeRoute_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
     const beat = yield Beat_1.default.findById(id);

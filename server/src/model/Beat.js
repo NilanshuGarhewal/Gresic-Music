@@ -22,7 +22,7 @@ const beatSchema = new mongoose_1.default.Schema({
     price: String,
     purchaseLink: String,
     releaseDate: String,
-});
+}, { timestamps: true });
 // --------------------------------------------->
 // --------------------------------------------->
 // --------------------------------------------->

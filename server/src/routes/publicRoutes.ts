@@ -1,3 +1,4 @@
+import { Request, Response } from "express";
 import express from "express";
 import Beat from "../model/Beat";
 
@@ -13,7 +14,7 @@ const router = express.Router();
 router.get(
   "/",
   safeRoute(async (req: Request, res: Response) => {
-    const beats = await Beat.find();
+    const beats = await Beat.find().sort({ createdAt: -1 });
     res.status(200).json(beats);
   })
 );
@@ -22,8 +23,17 @@ router.get(
 // --------------------------------------------->
 // --------------------------------------------->
 
+// GET 12 RANDOM BEATS
+router.get("/random", async (req: Request, res: Response) => {
+  const beats = await Beat.aggregate([{ $sample: { size: 24 } }]);
+  res.status(200).json(beats);
+});
+
+// --------------------------------------------->
+// --------------------------------------------->
+// --------------------------------------------->
+
 // GET SINGLE BEAT DATA
-import { Request, Response } from "express";
 
 router.get(
   "/track/:id",
