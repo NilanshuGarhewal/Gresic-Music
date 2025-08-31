@@ -1,16 +1,15 @@
 // IMPORTS
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // PAGES / ROUTES
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
 import Tracks from "./pages/track/Tracks";
 import TrackInfo from "./pages/show_track/TrackInfo";
 import Search from "./pages/search/Search";
+import Library from "./pages/library/Library";
 
 // LAYOUTS
 import Nav from "./layouts/Nav/Nav";
-// import Footer from "./layouts/Footer/Footer";
 
 // MAIN APP
 const App = () => {
@@ -19,15 +18,17 @@ const App = () => {
       {/* ROUTES */}
 
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/home" element={<Home />}></Route>
 
         <Route path="/tracks" element={<Tracks />}></Route>
 
         <Route path="/track/:id" element={<TrackInfo />}></Route>
 
+        <Route path="/library" element={<Library />}></Route>
+
         <Route path="/search" element={<Search />}></Route>
+
+        <Route path="/" element={<Navigate to="/home" replace />} />
       </Routes>
 
       {/* LAYOUTS */}

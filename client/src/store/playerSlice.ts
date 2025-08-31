@@ -8,7 +8,7 @@ export type Beat = {
   genre?: string[];
   mood?: string[];
   scale?: string;
-  duration?: string; // backend might send as string
+  duration?: string;
   price?: string;
   description?: string;
   coverImage?: string;

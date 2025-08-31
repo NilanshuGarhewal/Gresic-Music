@@ -13,8 +13,8 @@ const NavLinks = () => {
   return (
     <div className="nav-links">
       <Link
-        to={"/"}
-        className={`icon uni-link ${isActive("/") ? "active" : ""}`}
+        to={"/home"}
+        className={`icon uni-link ${isActive("/home") ? "active" : ""}`}
       >
         <span className="material-icons-round icon-child">home</span>
 
@@ -32,20 +32,20 @@ const NavLinks = () => {
       </Link>
 
       <Link
+        to={"/library"}
+        className={`icon uni-link ${isActive("/library") ? "active" : ""}`}
+      >
+        <span className="material-icons-round icon-child">library_music</span>
+        <p className="icon-title">Library</p>
+      </Link>
+
+      <Link
         to={"/search"}
         className={`icon uni-link ${isActive("/search") ? "active" : ""}`}
       >
         <MagnifyingGlassIcon className="icon-child" weight="regular" />
         <p className="icon-title">Search</p>
       </Link>
-
-      {/* <Link
-        to={"/about"}
-        className={`icon uni-link ${isActive("/about") ? "active" : ""}`}
-      >
-        <span className="material-icons-round icon-child">person</span>
-        <p className="icon-title">About</p>
-      </Link> */}
     </div>
   );
 };

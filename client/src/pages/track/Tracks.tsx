@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-// import Filters from "./components/FIlters";
-import TrackContainer from "./components/TrackContainer";
 
-// import Transition from "../../components/Transition/Transition";
+import TrackNew from "../../components/TrackWrapper/TrackNew";
+import TrackLatest from "../../components/TrackWrapper/TrackLatest";
+import TrackGenre from "../../components/TrackWrapper/TrackGenre";
+
+import Loading from "../../components/Loading/Loading";
 
 const Tracks = () => {
   const apiLink = process.env.REACT_APP_API_URL;
@@ -39,7 +41,22 @@ const Tracks = () => {
 
   return (
     <div className="tracks">
-      <TrackContainer allBeats={allBeats} />
+      <div className="track-heading bg-blur">
+        <p>Browse</p>
+        <div></div>
+      </div>
+
+      {allBeats.length > 0 ? (
+        <div className="browse-content-container">
+          <TrackNew allBeats={allBeats} till={3} />
+
+          <TrackLatest allBeats={allBeats} />
+
+          <TrackGenre allBeats={allBeats} />
+        </div>
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };

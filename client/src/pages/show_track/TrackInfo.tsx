@@ -10,6 +10,8 @@ import {
 import { RootState } from "../../store";
 import ColorThief from "color-thief-browser";
 
+import Loading from "../../components/Loading/Loading";
+
 type Beat = {
   _id: string;
   title?: string;
@@ -102,7 +104,7 @@ const TrackInfo = () => {
       .catch((err) => console.log(err));
   }, [id, apiLink]);
 
-  if (loading || !singleBeat) return <div>Loading...</div>;
+  if (loading || !singleBeat) return <Loading />;
 
   const isThisTrackPlaying = currentTrack?._id === singleBeat._id && isPlaying;
 

@@ -53,7 +53,7 @@ const TrailContainer = () => {
   // Array of image paths, dynamically generated with a string array type
   const images: string[] = Array.from(
     { length: trailImageCount },
-    (_, i) => `/assets/trailImages/img${i + 1}.avif`
+    (_, i) => `/assets/trail-images/img${i + 1}.avif`
   );
 
   //`/trail-images/img${i + 1}.jpeg`

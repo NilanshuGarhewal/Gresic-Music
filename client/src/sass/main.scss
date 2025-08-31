@@ -9,8 +9,7 @@
 @import "./base/typography";
 
 // COMPONENTS
-@import "./components/beat_card/BeatCard.scss";
-@import "./components/footer_card/FooterCard.scss";
+@import "./components/loading/loading.scss";
 @import "./components/trail/trail.scss";
 
 // LAYOUT
@@ -22,11 +21,6 @@
 @import "./layout/Nav/NavSearch.scss";
 @import "./layout/Nav/NavPlayer.scss";
 @import "./layout/Nav/ResponsiveNavbar.scss";
-
-// FOOTER
-@import "./layout/Footer/Footer.scss";
-@import "./layout/Footer/FooterContainer.scss";
-@import "./layout/Footer/FooterDots.scss";
 
 // PAGES
 
@@ -50,8 +44,8 @@
 @import "./pages/show_track/ShowTrackMore.scss";
 @import "./pages/show_track/RelatedTracks.scss";
 
-// ABOUT
-@import "./pages/about/About.scss";
+// LIBRARY
+@import "./pages/library/Library.scss";
 
 // SEARCH
 @import "./pages/search/Search.scss";

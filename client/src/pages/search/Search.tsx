@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
-import img from "../../assets/images/example.jpg";
 import { useDispatch } from "react-redux";
 import { playTrack } from "../../store/playerSlice";
 
@@ -111,7 +110,7 @@ const Search = () => {
                   </div>
 
                   <div className="search-card-image">
-                    <img src={beat.coverImage || img} alt="cover" />
+                    <img src={beat.coverImage} alt="cover" />
                   </div>
                 </div>
                 <div className="search-cards-divider"></div>

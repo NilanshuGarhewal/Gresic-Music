@@ -1,7 +1,8 @@
 @media (max-width: 1200px) {
-  .track-container {
-    .tc-heading {
-      padding: 0 getSpacing(lg);
+  .tracks {
+    .track-heading {
+      padding: getSpacing(xl) getSpacing(lg) 0;
+      row-gap: getSpacing(sm);
     }
 
     // NEW SECTION
@@ -45,17 +46,13 @@
 }
 
 @media (max-width: 768px) {
-  .track-container {
-    padding-top: getSpacing(xl);
+  .tracks {
+    .track-heading {
+      padding: getSpacing(xl) getSpacing(md) 0;
+      row-gap: getSpacing(sm);
 
-    .tc-heading {
-      padding: 0 getSpacing(md);
-
-      .tc-head {
-        padding-top: getSpacing(sm);
-        p {
-          font-size: 2rem;
-        }
+      p {
+        font-size: 2rem;
       }
     }
 
