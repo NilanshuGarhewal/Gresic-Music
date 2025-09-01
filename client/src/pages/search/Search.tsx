@@ -27,7 +27,7 @@ const Search = () => {
 
   const apiLink = process.env.REACT_APP_API_URL;
   const [allBeats, setAllBeats] = useState<Beat[]>([]);
-  const [query, setQuery] = useState(""); // search input state
+  const [query, setQuery] = useState(""); 
   const [filteredBeats, setFilteredBeats] = useState<Beat[]>([]);
 
   useEffect(() => {

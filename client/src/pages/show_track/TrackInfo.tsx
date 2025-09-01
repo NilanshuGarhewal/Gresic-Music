@@ -44,7 +44,7 @@ const TrackInfo = () => {
   const [singleBeat, setSingleBeat] = useState<Beat>();
   const [loading, setLoading] = useState(true);
   const [bgGradient, setBgGradient] = useState("black");
-  const [barColor, setBarColor] = useState("gray");
+  // const [barColor, setBarColor] = useState("gray");
 
   const dispatch = useDispatch();
   const { currentTrack, isPlaying, progress, durationSec, currentTimeSec } =
@@ -94,7 +94,7 @@ const TrackInfo = () => {
               setBgGradient(`linear-gradient(160deg, ${dark}, ${darker})`);
 
               // bar color
-              setBarColor(darker);
+              // setBarColor(darker);
             } catch (error) {
               console.warn("ColorThief failed:", error);
             }

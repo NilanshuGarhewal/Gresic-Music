@@ -6,7 +6,8 @@ import TrackNew from "../../components/TrackWrapper/TrackNew";
 import Loading from "../../components/Loading/Loading";
 
 const Home = () => {
-  const apiLink = process.env.REACT_APP_API_URL;
+  const apiRandom = process.env.REACT_APP_API_RANDOM;
+  const apiEnv = process.env.REACT_APP_API_URL;
 
   type Beat = {
     _id: string;
@@ -22,33 +23,45 @@ const Home = () => {
     coverImage?: string;
   };
 
-  const [allBeats, setAllBeats] = useState<Beat[]>([]);
+  const [beats, setBeats] = useState<{
+    all: Beat[];
+    random1: Beat[];
+    random2: Beat[];
+    random3: Beat[];
+  }>({
+    all: [],
+    random1: [],
+    random2: [],
+    random3: [],
+  });
+
+  // reusable fetcher
+  const fetchBeats = async (url: string): Promise<Beat[]> => {
+    try {
+      const res = await fetch(url);
+      return await res.json();
+    } catch (err) {
+      console.error("Fetch error:", err);
+      return [];
+    }
+  };
 
   useEffect(() => {
-    if (!apiLink) {
-      console.error("API URL is not defined!");
-      return;
-    }
+    const loadBeats = async () => {
+      if (!apiRandom) return [];
+      const [all, random1, random2] = await Promise.all([
+        fetchBeats(apiRandom),
+        fetchBeats(apiRandom),
+        fetchBeats(apiRandom),
+      ]);
 
-    fetch(apiLink)
-      .then((res) => res.json())
-      .then((data) => {
-        setAllBeats(data);
-      })
-      .catch((err) => console.log(err));
-  }, [apiLink]);
+      const random3 = apiEnv ? await fetchBeats(apiEnv) : [];
 
-  // const [navActive, setNavActive] = useState("typebeat");
+      setBeats({ all, random1, random2, random3 });
+    };
 
-  // const handleHomeNavActive = (str: string) => {
-  //   if (str === "remix") {
-  //     setNavActive("remix");
-  //   } else if (str === "typebeat") {
-  //     setNavActive("typebeat");
-  //   } else {
-  //     return;
-  //   }
-  // };
+    loadBeats();
+  }, [apiRandom, apiEnv]);
 
   return (
     <div className="home">
@@ -57,41 +70,16 @@ const Home = () => {
         <div></div>
       </div>
 
-      {/* <div className="home-navbar">
-        <span className="home-navbar-wrapper">
-          <div
-            className={`home-nav ${
-              navActive === "typebeat" ? "home-nav-active" : ""
-            }`}
-            onClick={() => {
-              handleHomeNavActive("typebeat");
-            }}
-          >
-            Typebeats
-          </div>
-          <div
-            className={`home-nav ${
-              navActive === "remix" ? "home-nav-active" : ""
-            }`}
-            onClick={() => {
-              handleHomeNavActive("remix");
-            }}
-          >
-            Remixes
-          </div>
-        </span>
-      </div> */}
-
-      {allBeats.length > 0 ? (
+      {beats.all.length > 0 ? (
         <div className="home-content-container">
           <span className="hcc-heading">
             <p className="hcc-top">Top Picks For You</p>
             <p className="hcc-bottom">New Today</p>
           </span>
 
-          <TrackNew allBeats={allBeats} till={4} />
-          <TrackLatest allBeats={allBeats} />
-          <TrackGenre allBeats={allBeats} />
+          <TrackNew allBeats={beats.random1} till={4} />
+          <TrackLatest allBeats={beats.random2} />
+          <TrackGenre allBeats={beats.random3} />
         </div>
       ) : (
         <Loading />

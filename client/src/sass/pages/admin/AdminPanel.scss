@@ -1,0 +1,31 @@
+.admin-panel {
+    width: 100vw;
+    height: auto;
+    padding: getSpacing(lg);
+
+    .admin-search {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: getSpacing(md);
+
+        .admin-heading {
+            font-size: 2rem;
+            font-family: $font-bold;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            background: $bg-tertiary;
+            color: white;
+            font-family: $font-main;
+            padding: getSpacing(sm);
+            border-radius: 999px;
+            width: 30%;
+            height: 40px;
+            text-align: center;
+        }
+    }
+}

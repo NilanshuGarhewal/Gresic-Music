@@ -77,7 +77,7 @@ const TrackGenre = ({ allBeats }: BeatProps) => {
             (beat) =>
               beat.genre?.[0]?.toLowerCase() === filterGenre.toLowerCase()
           )
-          .slice(0, 10)
+          .slice(0, 8)
           .map((beat, index) => (
             <div
               className="tc-pop-card"
@@ -89,7 +89,9 @@ const TrackGenre = ({ allBeats }: BeatProps) => {
               </div>
               <div className="tc-pop-card-info">
                 <p className="tc-pop-card-info-title">{beat.title}</p>
-                <p className="tc-pop-card-info-genre">{beat.genre?.[1]} &middot; {beat.bpm} BPM</p>
+                <p className="tc-pop-card-info-genre">
+                  {beat.genre?.[1]} &middot; {beat.bpm} BPM
+                </p>
               </div>
             </div>
           ))}
