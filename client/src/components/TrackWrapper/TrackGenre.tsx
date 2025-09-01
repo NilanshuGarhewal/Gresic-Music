@@ -24,41 +24,44 @@ type BeatProps = {
 const TrackGenre = ({ allBeats }: BeatProps) => {
   const dispatch = useDispatch();
 
-  const handlePlay = (beat: Beat) => {
-    dispatch(playTrack(beat));
-  };
+  const handlePlay = (beat: Beat) => dispatch(playTrack(beat));
 
-  // reusable scroll function
+  // reusable scroll hook
   const useScroll = () => {
     const ref = useRef<HTMLDivElement>(null);
 
-    const scrollLeft = () => {
+    const scroll = (dir: "left" | "right") => {
       if (ref.current) {
-        ref.current.scrollBy({ left: -500, behavior: "smooth" });
+        ref.current.scrollBy({
+          left: dir === "left" ? -500 : 500,
+          behavior: "smooth",
+        });
       }
     };
 
-    const scrollRight = () => {
-      if (ref.current) {
-        ref.current.scrollBy({ left: 500, behavior: "smooth" });
-      }
+    return {
+      ref,
+      scrollLeft: () => scroll("left"),
+      scrollRight: () => scroll("right"),
     };
-
-    return { ref, scrollLeft, scrollRight };
   };
 
-  // create scroll refs for each section
-  const popScroll = useScroll();
-  const hiphopScroll = useScroll();
-  const synthwaveScroll = useScroll();
-  const afrobeatScroll = useScroll();
+  // section configs (title + genres)
+  const sections = [
+    { title: "Pop Refined", genres: ["pop"], scroll: useScroll() },
+    {
+      title: "Hip Hop & Trap",
+      genres: ["hip-hop", "trap"],
+      scroll: useScroll(),
+    },
+  ];
 
   const renderSection = (
     title: string,
-    filterGenre: string,
+    filterGenres: string[],
     scroll: ReturnType<typeof useScroll>
   ) => (
-    <span className="tc-pop">
+    <section className="tc-pop" key={title}>
       <div className="tc-pop-heading">
         <p>{title}</p>
         <span>
@@ -73,12 +76,13 @@ const TrackGenre = ({ allBeats }: BeatProps) => {
 
       <div className="tc-pop-container" ref={scroll.ref}>
         {allBeats
-          .filter(
-            (beat) =>
-              beat.genre?.[0]?.toLowerCase() === filterGenre.toLowerCase()
+          .filter((beat) =>
+            beat.genre?.some((g) =>
+              filterGenres.some((fg) => g.toLowerCase() === fg.toLowerCase())
+            )
           )
           .slice(0, 8)
-          .map((beat, index) => (
+          .map((beat) => (
             <div
               className="tc-pop-card"
               key={beat._id}
@@ -90,23 +94,16 @@ const TrackGenre = ({ allBeats }: BeatProps) => {
               <div className="tc-pop-card-info">
                 <p className="tc-pop-card-info-title">{beat.title}</p>
                 <p className="tc-pop-card-info-genre">
-                  {beat.genre?.[1]} &middot; {beat.bpm} BPM
+                  {beat.genre?.slice(1, 3).join(", ")} &middot; {beat.bpm} BPM
                 </p>
               </div>
             </div>
           ))}
       </div>
-    </span>
+    </section>
   );
 
-  return (
-    <>
-      {renderSection("Pop Ones", "pop", popScroll)}
-      {renderSection("Hip Hop & Trap", "hip hop", hiphopScroll)}
-      {renderSection("Synthwave & NuAge", "synthwave", synthwaveScroll)}
-      {renderSection("Afrobeats", "afro", afrobeatScroll)}
-    </>
-  );
+  return <>{sections.map((s) => renderSection(s.title, s.genres, s.scroll))}</>;
 };
 
 export default TrackGenre;

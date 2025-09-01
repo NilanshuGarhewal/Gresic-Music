@@ -50,7 +50,7 @@ const Tracks = () => {
         <div className="browse-content-container">
           <TrackNew allBeats={allBeats} till={3} />
 
-          <TrackLatest allBeats={allBeats} />
+          <TrackLatest allBeats={allBeats} headingName={"Latest Typebeats"}/>
 
           <TrackGenre allBeats={allBeats} />
         </div>

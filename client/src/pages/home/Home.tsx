@@ -78,7 +78,7 @@ const Home = () => {
           </span>
 
           <TrackNew allBeats={beats.random1} till={4} />
-          <TrackLatest allBeats={beats.random2} />
+          <TrackLatest allBeats={beats.random2} headingName={"Typebeats"}/>
           <TrackGenre allBeats={beats.random3} />
         </div>
       ) : (

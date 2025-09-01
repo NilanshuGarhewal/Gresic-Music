@@ -76,7 +76,6 @@
     }
 
     .home-content-container {
-
       .hcc-heading {
         padding: 0 getSpacing(md);
       }
@@ -88,8 +87,16 @@
         column-gap: getSpacing(md);
 
         .tc-card {
-          min-width: 220px;
-          width: 220px;
+          min-width: 260px;
+          width: 260px;
+
+          &:hover {
+            .tc-card-image {
+              img {
+                transform: scale(1);
+              }
+            }
+          }
 
           &:hover {
             .tc-card-image {
@@ -99,7 +106,7 @@
 
           .tc-card-image {
             border: none;
-            height: 220px;
+            height: 260px;
           }
         }
       }

@@ -1,3 +1,21 @@
+// Reusable helpers
+@mixin section-padding($size) {
+  padding: 0 getSpacing($size);
+}
+
+@mixin hover-border($target, $alpha: 0.1, $scale: 1) {
+  &:hover {
+    #{$target} {
+      border: 1px solid rgba(#fff, $alpha);
+      transform: scale($scale);
+    }
+  }
+}
+
+// =======================
+// Tracks Responsive Styles
+// =======================
+
 @media (max-width: 1200px) {
   .tracks {
     .track-heading {
@@ -5,42 +23,28 @@
       row-gap: getSpacing(sm);
     }
 
-    // NEW SECTION
-    .tc-new {
-      padding: 0 getSpacing(lg);
+    .tc-new,
+    .tc-latest,
+    .tc-pop-container {
+      @include section-padding(lg);
+    }
 
-      .tc-card {
-        &:hover {
-          .tc-card-image {
-            border: 2px solid rgba($color: #fff, $alpha: 0.1);
-          }
-        }
+    // Cards
+    .tc-new .tc-card {
+      @include hover-border(".tc-card-image", 0.1);
+    }
+
+    .tc-latest-container {
+      display: flex;
+      overflow-x: auto;
+
+      .tc-latest-wrapper {
+        min-width: 380px;
       }
     }
 
-    // NEW LATEST
-    .tc-latest {
-      padding: 0 getSpacing(lg);
-
-      .tc-latest-container {
-        display: flex;
-        overflow-x: scroll;
-
-        .tc-latest-wrapper {
-          min-width: 380px;
-        }
-      }
-    }
-
-    // SORTED BY GENRE
-    .tc-pop {
-      .tc-pop-heading {
-        padding: 0 getSpacing(lg);
-      }
-
-      .tc-pop-container {
-        padding: 0 getSpacing(lg);
-      }
+    .tc-pop-heading {
+      @include section-padding(lg);
     }
   }
 }
@@ -58,7 +62,7 @@
 
     // NEW SECTION
     .tc-new {
-      padding: 0 getSpacing(md);
+      @include section-padding(md);
       min-height: 350px;
 
       .tc-card {
@@ -68,25 +72,32 @@
           height: 220px;
         }
       }
+
+      &:hover {
+        .tc-card-image {
+          img {
+            transform: scale(1);
+          }
+        }
+      }
     }
 
-    // NEW LATEST
+    // LATEST
     .tc-latest {
       padding: 0;
 
       .tc-latest-heading {
         width: 100%;
-        height: auto;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-family: $font-bold;
-        padding: 0 getSpacing(md);
+        @include section-padding(md);
       }
 
       .tc-latest-container {
         display: flex;
-        overflow-x: scroll;
-        column-gap: getSpacing(md);
-        padding: 0 getSpacing(md);
+        overflow-x: auto;
+        gap: getSpacing(md);
+        @include section-padding(md);
 
         .tc-latest-wrapper {
           min-width: calc(100vw - (getSpacing(md) * 4));
@@ -95,17 +106,8 @@
           .tc-latest-beat {
             gap: getSpacing(md);
 
-            &:hover {
-              .tc-latest-beat-image {
-                border: 1px solid rgba($color: #fff, $alpha: 0.1);
-              }
-
-              .tc-latest-beat-info {
-                .tc-latest-wrapper-beat-divider {
-                  background: $bg-border;
-                }
-              }
-            }
+            @include hover-border(".tc-latest-beat-image", 0.1);
+            @include hover-border(".tc-latest-wrapper-beat-divider", 1, 1);
           }
         }
       }
@@ -117,24 +119,19 @@
       gap: getSpacing(md);
 
       .tc-pop-heading {
-        padding: 0 getSpacing(md);
+        @include section-padding(md);
         font-size: 1.5rem;
       }
 
       .tc-pop-container {
-        padding: 0 getSpacing(md);
+        @include section-padding(md);
 
         .tc-pop-card {
           width: 160px;
           min-width: 160px;
           gap: getSpacing(sm);
 
-          &:hover {
-            .tc-pop-card-image {
-              transform: scale(1);
-              border: 1px solid rgba($color: #fff, $alpha: 0.1);
-            }
-          }
+          @include hover-border(".tc-pop-card-image", 0.1, 1);
 
           .tc-pop-card-image {
             height: 160px;

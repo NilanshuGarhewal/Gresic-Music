@@ -2,7 +2,7 @@ import { useState } from "react";
 import AdminPanel from "./AdminPanel";
 
 const Admin = () => {
-  const [authorized, setAuthorized] = useState(true);
+  const [authorized, setAuthorized] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 

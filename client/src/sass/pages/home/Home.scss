@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   row-gap: getSpacing(lg);
+  margin-bottom: 200px;
 
   // HEADING
   .home-heading {
@@ -59,11 +60,9 @@
 
   .home-content-container {
     width: 100%;
-    padding: 0 0 getSpacing(3xl);
     display: flex;
     flex-direction: column;
     gap: getSpacing(md);
-    padding-bottom: 220px;
     position: relative;
 
     .hcc-heading {
@@ -71,7 +70,7 @@
       display: flex;
       flex-direction: column;
       row-gap: getSpacing(xs);
-      
+
       .hcc-top {
         font-family: $font-bold;
         font-size: 2rem;
@@ -95,6 +94,7 @@
         background-color: $bg-secondary;
         border-radius: getSpacing(md);
         gap: 0;
+        border: 2px solid #ffffff10;
 
         .tc-card-image {
           border: none;

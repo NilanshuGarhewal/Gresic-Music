@@ -1,6 +1,4 @@
 import React from "react";
-
-// STORE
 import { useDispatch } from "react-redux";
 import { playTrack } from "../../store/playerSlice";
 
@@ -25,31 +23,27 @@ type BeatProps = {
 
 const TrackNew = ({ allBeats, till }: BeatProps) => {
   const dispatch = useDispatch();
-
-  const handlePlay = (beat: Beat) => {
-    dispatch(playTrack(beat));
-  };
+  const handlePlay = (beat: Beat) => dispatch(playTrack(beat));
 
   return (
-    <span className="tc-new">
-      {allBeats.slice(0, till).map((beat, index) => (
+    <section className="tc-new">
+      {allBeats.slice(0, till).map((beat) => (
         <div
+          key={beat._id}
           className="tc-card"
-          onClick={() => {
-            handlePlay(beat);
-          }}
+          onClick={() => handlePlay(beat)}
         >
           <div className="tc-card-info">
-            <div className="tc-card-new">NEW TYPEBEAT</div>
-            <div className="tc-card-genre">{beat.title}</div>
-            <div className="tc-card-song-name">Gresic</div>
+            <span className="tc-card-new">NEW TYPEBEAT</span>
+            <span className="tc-card-genre">{beat.title}</span>
+            <span className="tc-card-song-name">Gresic</span>
           </div>
           <div className="tc-card-image">
-            <img src={beat.coverImage} alt="cover" />
+            <img src={beat.coverImage} alt={beat.title || "cover"} />
           </div>
         </div>
       ))}
-    </span>
+    </section>
   );
 };
 
