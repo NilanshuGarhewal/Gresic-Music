@@ -73,13 +73,40 @@ router.post("/", async (req: Request, res: Response) => {
 });
 
 // ✅ Update existing beat
-// ✅ Update existing beat
 router.put("/:id", async (req: Request, res: Response) => {
   try {
-    const { title, bpm, audioUrl, genre } = req.body;
+    // Destructure all possible fields from request body
+    const {
+      title,
+      description,
+      coverImage,
+      audioUrl,
+      duration,
+      bpm,
+      scale,
+      genre,
+      mood,
+      price,
+      purchaseLink,
+      releaseDate,
+    } = req.body;
 
-    // Check if at least one field is provided for update
-    if (!title && !bpm && !audioUrl && !genre) {
+    // Build an update object with only the fields that are provided
+    const updateFields: any = {};
+    if (title !== undefined) updateFields.title = title;
+    if (description !== undefined) updateFields.description = description;
+    if (coverImage !== undefined) updateFields.coverImage = coverImage;
+    if (audioUrl !== undefined) updateFields.audioUrl = audioUrl;
+    if (duration !== undefined) updateFields.duration = duration;
+    if (bpm !== undefined) updateFields.bpm = bpm;
+    if (scale !== undefined) updateFields.scale = scale;
+    if (genre !== undefined) updateFields.genre = genre;
+    if (mood !== undefined) updateFields.mood = mood;
+    if (price !== undefined) updateFields.price = price;
+    if (purchaseLink !== undefined) updateFields.purchaseLink = purchaseLink;
+    if (releaseDate !== undefined) updateFields.releaseDate = releaseDate;
+
+    if (Object.keys(updateFields).length === 0) {
       return res
         .status(400)
         .json({ error: "At least one field is required to update" });
@@ -87,7 +114,7 @@ router.put("/:id", async (req: Request, res: Response) => {
 
     const updatedBeat = await Beat.findByIdAndUpdate(
       req.params.id,
-      { title, bpm, audioUrl, genre },
+      updateFields,
       { new: true, runValidators: true }
     );
 
@@ -104,6 +131,7 @@ router.put("/:id", async (req: Request, res: Response) => {
     res.status(500).json({ error: "Failed to update beat" });
   }
 });
+
 
 // ✅ Delete beat
 router.delete("/:id", async (req: Request, res: Response) => {
