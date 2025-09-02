@@ -106,8 +106,17 @@
           .tc-latest-beat {
             gap: getSpacing(md);
 
-            @include hover-border(".tc-latest-beat-image", 0.1);
-            @include hover-border(".tc-latest-wrapper-beat-divider", 1, 1);
+            &:hover {
+              .tc-latest-beat-image {
+                border: 1px solid rgba($color: #fff, $alpha: 0.1);
+              }
+
+              .tc-latest-beat-info {
+                .tc-latest-wrapper-beat-divider {
+                  background: $bg-border;
+                }
+              }
+            }
           }
         }
       }

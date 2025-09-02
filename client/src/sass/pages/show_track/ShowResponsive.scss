@@ -1,0 +1,96 @@
+@media (max-width: 1200px) {
+  .track-info {
+    padding: 0 getSpacing(lg);
+
+    .track-info-wrapper {
+      .st-box1 {
+        .st-box-image-wrapper {
+          width: 26rem;
+          height: 26rem;
+        }
+      }
+
+      .st-box2 {
+        height: 26rem;
+        max-height: 26rem;
+        .st-info2 {
+          .st-info2-des {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .track-info {
+    padding: 0 getSpacing(lg);
+    height: 100vh;
+
+    .track-info-wrapper {
+      width: auto;
+      height: 100%;
+      flex-direction: column-reverse;
+      justify-content: start;
+      align-items: center;
+      gap: getSpacing(lg);
+      padding-top: getSpacing(3xl);
+
+      .st-box1 {
+        .st-box-image-wrapper {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .st-box2 {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+        max-height: auto;
+        // background: red;
+        align-items: start;
+        gap: getSpacing(md);
+
+        .st-info1 {
+          text-align: start;
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-between;
+
+          .st-info-section {
+            .st-info-song-name {
+              font-size: 1.5rem;
+            }
+
+            .st-info-artist-name {
+              color: $fg-secondary;
+            }
+          }
+
+          .st-interaction-section {
+            display: flex;
+            gap: getSpacing(md);
+          }
+        }
+
+        .st-info2 {
+          display: none;
+        }
+
+        .st-box-player-wrapper {
+          //   background: blue;
+          gap: getSpacing(md);
+
+          .beat-purchase-options {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+

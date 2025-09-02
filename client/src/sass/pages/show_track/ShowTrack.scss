@@ -1,260 +1,206 @@
 .track-info {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 0 getSpacing(3xl);
 
-  .back-icon {
-    padding: getSpacing(sm) 0;
-    color: $fg-primary;
-    cursor: pointer;
-    z-index: 120;
-    position: fixed;
-    top: 1rem;
+  .go-back {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: getSpacing(md);
+    display: flex;
+    justify-content: center;
+    z-index: 100000;
+
+    .go-back-icon {
+      @include flex-center;
+      transform: rotate(-90deg);
+      color: $fg-secondary;
+    }
   }
 
   .track-info-wrapper {
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
     z-index: 100;
 
-    .show-track-wrapper {
-      width: 100%;
-      height: auto;
+    .st-box1 {
       display: flex;
+      flex-direction: column;
+      gap: getSpacing(lg);
+
+      .st-box-image-wrapper {
+        width: 30rem;
+        height: 30rem;
+        overflow: hidden;
+        border-radius: getSpacing(md);
+        box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+        border: 2px solid rgba(#fff, 0.1);
+        transform: scale(1) rotate(0);
+        transition: transform 0.5s $anim;
+
+        &.scale-less {
+          transform: scale(0.9) rotate(3deg);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .st-box2 {
+      flex: 1;
+      margin-right: getSpacing(lg);
+      height: 30rem;
+      max-height: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: space-between;
+      gap: getSpacing(lg);
 
-      .st-box1 {
-        display: flex;
-        flex-direction: column;
-        gap: getSpacing(lg);
+      .st-info1 {
+        text-align: center;
 
-        .st-box-image-wrapper {
-          width: 24rem;
-          height: 24rem;
-          overflow: hidden;
-          border-radius: getSpacing(md);
-          box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
-          border: 2px solid rgba($color: #fff, $alpha: 0.1);
+        .st-info-section {
+          .st-info-song-name {
+            font-size: 3rem;
+            font-family: $font-bold;
+          }
 
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+          .st-info-artist-name {
+            color: $fg-secondary;
           }
         }
 
-        .st-box-player-wrapper {
+        .st-interaction-section {
+          display: none;
+        }
+      }
+
+      .st-info2 {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: getSpacing(lg);
+
+        .st-info2-des {
+          text-align: center;
+        }
+
+        .st-info2-wrapper {
+          display: flex;
+          gap: getSpacing(sm);
+        }
+
+        .st-arr-wrapper {
           display: flex;
           flex-direction: column;
-          gap: getSpacing(md);
+          align-items: flex-end;
+          gap: getSpacing(sm);
 
-          .st-box-player-wrapper-box {
-            .player-bar-song-name {
-              font-size: 1.5rem;
-              display: none;
-            }
+          .st-arr-wrapper-heading {
+            font-size: 12px;
+            color: $fg-primary;
+            padding: getSpacing(xs);
+            background: rgba(#000, 0.3);
+            border-radius: getSpacing(sm);
+          }
 
-            .player-bar {
-              width: 100%;
-              height: 5px;
-              background: rgba($color: #fff, $alpha: 0.1);
-              border-radius: 2px;
-              overflow: hidden;
-              margin: 8px 0;
-              cursor: pointer;
+          .st-arr-wrapper-box {
+            display: flex;
+            gap: getSpacing(sm);
+
+            .st-arr-wrapper-element {
+              border: 2px solid $fg-secondary;
+              border-radius: 999px;
+              padding: getSpacing(sm) getSpacing(md);
             }
+          }
+        }
+      }
+
+      .st-box-player-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .beat-purchase-options {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          margin-bottom: getSpacing(md);
+
+          .beat-add-cart {
+            padding: getSpacing(sm) getSpacing(md);
+            background: #fff;
+            color: #000;
+            border-radius: 999px;
+            font-family: $font-bold;
+          }
+
+          .beat-like {
+            display: flex;
+            gap: getSpacing(md);
+          }
+        }
+
+        .st-box-player-wrapper-box {
+          .player-bar-song-name {
+            font-size: 1.5rem;
+            display: none;
+          }
+
+          .player-bar {
+            width: 100%;
+            height: 5px;
+            background: rgba(#fff, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 8px;
+            cursor: pointer;
 
             .player-progress {
               height: 100%;
-              background: rgba($color: #fff, $alpha: 0.1);
+              background: rgba(#fff, 1);
               border-radius: 999px;
               transition: width 0.2s linear;
             }
-
-            .player-song-duration {
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-              font-size: 12px;
-              opacity: 0.1;
-            }
           }
 
-          .player-controls {
-            width: 100%;
-            height: auto;
+          .player-song-duration {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: getSpacing(md);
-
-            .pc-skip {
-              font-size: 3rem;
-            }
-
-            .pc-play {
-              font-size: 5rem;
-            }
-          }
-        }
-      }
-
-      .st-box2 {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: getSpacing(lg);
-
-        .st-info1 {
-          .st-name {
-            font-size: 4rem;
-          }
-
-          .st-info-act {
-            display: none;
-            color: #fff;
-            opacity: 0.3;
+            justify-content: space-between;
+            font-size: 12px;
+            color: $fg-secondary;
           }
         }
 
-        .st-info2 {
+        .player-controls {
           display: flex;
-          flex-direction: column;
-          align-items: end;
-          gap: getSpacing(lg);
-
-          .st-arr-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            gap: getSpacing(sm);
-
-            .st-arr-wrapper-heading {
-              font-size: 12px;
-              color: $fg-primary;
-              padding: getSpacing(xs);
-              background: rgba($color: #000000, $alpha: 0.3);
-              display: inline;
-              border-radius: getSpacing(sm);
-            }
-
-            .st-arr-wrapper-box {
-              display: flex;
-              gap: getSpacing(sm);
-
-              .st-arr-wrapper-element {
-                background: rgba($color: #000000, $alpha: 0.3);
-                border-radius: getSpacing(sm);
-                padding: getSpacing(sm);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .track-info {
-    .track-info-wrapper {
-      width: 100%;
-      justify-content: center;
-
-      .show-track-wrapper {
-        flex-direction: column;
-        width: auto;
-
-        .st-box1 {
-          height: 100vh;
-          padding-top: 6rem;
-          .st-box-player-wrapper {
-            .st-box-player-wrapper-box {
-              .player-bar-song-name {
-                display: block;
-              }
-            }
-          }
-        }
-
-        .st-box2 {
-          margin-bottom: 2rem;
+          justify-content: center;
           align-items: center;
+          gap: getSpacing(md);
 
-          .st-info1 {
-            .st-name {
-              display: none;
-            }
-
-            .st-info-act {
-              display: block;
-              color: $bg-tertiary;
-              font-size: 10px;
-            }
+          .pc-skip {
+            font-size: 3rem;
           }
 
-          .st-info2 {
-            align-items: center;
-
-            .st-arr-wrapper {
-              align-items: center;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 476px) {
-  .track-info {
-    .track-info-wrapper {
-      .show-track-wrapper {
-        .st-box1 {
-          .st-box-image-wrapper {
-            height: 20rem;
-            width: 20rem;
-          }
-
-          .st-box-player-wrapper {
-            margin-top: 2rem;
-
-            .st-box-player-wrapper-box {
-              .player-bar-song-name {
-                display: block;
-              }
-            }
-          }
-        }
-
-        .st-box2 {
-          margin-bottom: 2rem;
-          align-items: center;
-
-          .st-info1 {
-            .st-name {
-              display: none;
-            }
-
-            .st-info-act {
-              display: block;
-              color: $bg-tertiary;
-              font-size: 10px;
-            }
-          }
-
-          .st-info2 {
-            align-items: center;
-
-            .st-arr-wrapper {
-              align-items: center;
-            }
+          .pc-play {
+            font-size: 5rem;
           }
         }
       }

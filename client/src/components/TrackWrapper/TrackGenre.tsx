@@ -94,7 +94,7 @@ const TrackGenre = ({ allBeats }: BeatProps) => {
               <div className="tc-pop-card-info">
                 <p className="tc-pop-card-info-title">{beat.title}</p>
                 <p className="tc-pop-card-info-genre">
-                  {beat.genre?.slice(1, 3).join(", ")} &middot; {beat.bpm} BPM
+                  {beat.genre?.slice(0, 2).join(", ")} &middot; {beat.bpm} BPM
                 </p>
               </div>
             </div>
