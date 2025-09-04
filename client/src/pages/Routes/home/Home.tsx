@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import TrackLatest from "../../components/TrackWrapper/TrackLatest";
-import TrackGenre from "../../components/TrackWrapper/TrackGenre";
-import TrackNew from "../../components/TrackWrapper/TrackNew";
-import Loading from "../../components/Loading/Loading";
+import TrackLatest from "../../../components/TrackWrapper/TrackLatest";
+import TrackGenre from "../../../components/TrackWrapper/TrackGenre";
+import TrackNew from "../../../components/TrackWrapper/TrackNew";
+import Loading from "../../../components/Loading/Loading";
 
 const Home = () => {
   const apiRandom = process.env.REACT_APP_API_RANDOM;

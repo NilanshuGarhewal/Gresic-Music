@@ -6,10 +6,10 @@ import {
   pauseTrack,
   resumeTrack,
   setSeek,
-} from "../../store/playerSlice";
-import { RootState } from "../../store";
+} from "../../../store/playerSlice";
+import { RootState } from "../../../store";
 import ColorThief from "color-thief-browser";
-import Loading from "../../components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import {
   HeartIcon,
   DotsThreeOutlineVerticalIcon,

@@ -2,17 +2,17 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // PAGES / ROUTES
-import Home from "./pages/home/Home";
-import Tracks from "./pages/track/Tracks";
-import TrackInfo from "./pages/show_track/TrackInfo";
-import Search from "./pages/search/Search";
-import Library from "./pages/library/Library";
-import Admin from "./pages/admin/Admin";
-import EditBeat from "./pages/admin/EditPage";
+import Home from "./pages/Routes/home/Home";
+import Tracks from "./pages/Routes/track/Tracks";
+import TrackInfo from "./pages/Routes/show_track/TrackInfo";
+import Search from "./pages/Routes/search/Search";
+import Library from "./pages/Routes/library/Library";
+import Admin from "./pages/admin/SecurityCheck";
+import EditBeat from "./pages/CRUD/UpdatePage";
 
 // LAYOUTS
 import Nav from "./layouts/Nav/Nav";
-import CreatePage from "./pages/admin/CreatePage";
+import CreatePage from "./pages/CRUD/CreatePage";
 
 // MAIN APP
 const App = () => {

@@ -25,32 +25,32 @@
 // PAGES
 
 // HOME
-@import "./pages/home/Home.scss";
-@import "./pages/home/HeroSection.scss";
-@import "./pages/home/PianoSection.scss";
-@import "./pages/home/HeroResponsive.scss";
+@import "./pages/Routes/home/Home.scss";
+@import "./pages/Routes/home/HeroSection.scss";
+@import "./pages/Routes/home/PianoSection.scss";
+@import "./pages/Routes/home/HeroResponsive.scss";
 
 // Track
-@import "./pages/track/Track.scss";
-@import "./pages/track/TrackContainer.scss";
-@import "./pages/track/TrackCard.scss";
-@import "./pages/track/TrackGenre.scss";
-@import "./pages/track/TrackLatest.scss";
-@import "./pages/track/TrackNew.scss";
-@import "./pages/track/TrackResponsive.scss";
+@import "./pages/Routes/track/Track.scss";
+@import "./pages/Routes/track/TrackContainer.scss";
+@import "./pages/Routes/track/TrackCard.scss";
+@import "./pages/Routes/track/TrackGenre.scss";
+@import "./pages/Routes/track/TrackLatest.scss";
+@import "./pages/Routes/track/TrackNew.scss";
+@import "./pages/Routes/track/TrackResponsive.scss";
 
 // SHOW TRACK
-@import "./pages/show_track/ShowTrack.scss";
-@import "./pages/show_track/ShowResponsive.scss";
-@import "./pages/show_track/ShowTrackMore.scss";
-@import "./pages/show_track/RelatedTracks.scss";
+@import "./pages/Routes/show_track/ShowTrack.scss";
+@import "./pages/Routes/show_track/ShowResponsive.scss";
+@import "./pages/Routes/show_track/ShowTrackMore.scss";
+@import "./pages/Routes/show_track/RelatedTracks.scss";
 
 // LIBRARY
-@import "./pages/library/Library.scss";
+@import "./pages/Routes/library/Library.scss";
 
 // SEARCH
-@import "./pages/search/Search.scss";
-@import "./pages/search/SearchResponsive.scss";
+@import "./pages/Routes/search/Search.scss";
+@import "./pages/Routes/search/SearchResponsive.scss";
 
 // ADMIN
 @import "./pages/admin/AdminPanel.scss";

@@ -255,5 +255,4 @@ const testingData = [
     releaseDate: "8 Sept 2022",
   },
 ];
-
-export default testingData;
+exports.default = testingData;

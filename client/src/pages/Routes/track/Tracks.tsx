@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-import TrackNew from "../../components/TrackWrapper/TrackNew";
-import TrackLatest from "../../components/TrackWrapper/TrackLatest";
-import TrackGenre from "../../components/TrackWrapper/TrackGenre";
+import TrackNew from "../../../components/TrackWrapper/TrackNew";
+import TrackLatest from "../../../components/TrackWrapper/TrackLatest";
+import TrackGenre from "../../../components/TrackWrapper/TrackGenre";
 
-import Loading from "../../components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 
 const Tracks = () => {
   const apiLink = process.env.REACT_APP_API_URL;

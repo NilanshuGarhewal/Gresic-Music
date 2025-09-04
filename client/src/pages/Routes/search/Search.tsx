@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import { useDispatch } from "react-redux";
-import { playTrack } from "../../store/playerSlice";
+import { playTrack } from "../../../store/playerSlice";
 
 // import Transition from "../../components/Transition/Transition";
 
