@@ -160,7 +160,10 @@ const NavPlayer = () => {
         </Link>
 
         {/* info + progress */}
-        <div className="player-container">
+        <Link
+          to={`/track/${currentTrack._id}`}
+          className="player-container uni-link"
+        >
           <div className="player-wrapper">
             <div className="player-info">{currentTrack.title}</div>
             <div className="duration">
@@ -191,7 +194,7 @@ const NavPlayer = () => {
 
             <div className="mp-progress" style={{ width: `${progressPct}%` }} />
           </div>
-        </div>
+        </Link>
 
         {/* play/pause */}
         <div className="player-control" onClick={togglePlay}>
