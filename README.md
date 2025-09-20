@@ -52,7 +52,7 @@ Visit `http://localhost:3000` in your browser to view the app.
 ## Technologies Used
 
 - TypeScript
-- React (assumed, update if different)
+- React
 - Vercel (for deployment)
 
 ## Contributing
